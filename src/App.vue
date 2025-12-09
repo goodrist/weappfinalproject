@@ -79,7 +79,7 @@ onUnmounted(() => {
 
     <div class="logo-container">
       <img
-        src="../images/lakerstore-logo.png"
+        src="/images/lakerstore-logo.png"
         alt="GVSU LakerStore Logo"
         class="logo-img"
       />
