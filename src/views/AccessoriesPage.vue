@@ -11,7 +11,7 @@
       
     </div>
   </section>
-</template>
+
 
   <ProductGrid
     v-if="!selectedItem"
