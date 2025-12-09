@@ -27,6 +27,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from "vue-router";
+
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
 import pennantcrew from '../images/pennantcrew.jpg';
@@ -39,6 +41,8 @@ import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import gvbeanie from '../images/gvbeanie.jpg';
 import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg'; 
 
+const router = useRouter();
+
 type Product = {
   id: string;
   name: string;
@@ -50,7 +54,7 @@ type Product = {
 };
 
 const onShopClick = () => {
-  alert("Men’s collection coming soon!");
+  router.push("/mens-shop");
 };
 
 const mensItems: Product[] = [
