@@ -45,3 +45,45 @@ const emit = defineEmits<{
   select: [ProductItem];
 }>();
 </script>
+
+
+<style scoped>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.product-card {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 180px; /* controls image size */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-name {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.product-tag {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #777;
+}
+</style>
