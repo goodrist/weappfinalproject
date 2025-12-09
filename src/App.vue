@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
+import { useAuthStore } from "@/stores/authStore";
+const auth = useAuthStore();
+
+
 // Page imports
 import HomePage from './views/HomePage.vue';
 import MensPage from './views/MensPage.vue';
@@ -54,6 +58,15 @@ const goToCart = () => {
   navigateTo('cart');
 };
 
+const handleCartClick = () => {
+  if (!auth.user) {
+    alert("Please sign in to view your shopping bag.");
+    return;
+  }
+  goToCart(); // allowed
+};
+
+
 // Mount listeners
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
@@ -69,9 +82,51 @@ onUnmounted(() => {
   <header class="navbar" :class="{ scrolled: isScrolled }">
     <div class="top-bar">
       <div class="right-icons">
-        <!-- Sign In now also goes to Cart -->
-        <a href="#" class="signin" @click.prevent="goToCart">Sign In</a>
-        <a href="#" class="cart" @click.prevent="goToCart">
+
+        
+        <!-- SIGN-IN / USER INFO + SIGN OUT -->
+        <div>
+          <!-- Loading -->
+          <span v-if="auth.loading">Loading...</span>
+
+          <!-- If NOT logged in -->
+          <a
+            v-else-if="!auth.user"
+            href="#"
+            class="signin"
+            @click.prevent="auth.login"
+          >
+            Sign In
+          </a>
+
+          <!-- If logged in: show user -->
+          <div v-else style="display: flex; align-items: center; gap: 0.5rem;">
+            <img
+              :src="auth.user.photoURL"
+              alt="User"
+              style="width: 28px; height: 28px; border-radius: 50%;"
+            />
+            <span>{{ auth.user.displayName }}</span>
+            <button
+              @click="auth.logout"
+              style="background: none; border: none; color: #0032A0; cursor: pointer;"
+            >
+              Sign Out
+            </button>
+          </div>
+        </div>
+
+        <!-- CART BUTTON (protected) -->
+        <a
+          href="#"
+          class="cart"
+          @click.prevent="handleCartClick"
+        >
+          <img src="/images/cart-icon.png" alt="Shopping Cart" />
+        </a>
+
+
+
           <img src="/images/cart-icon.png" alt="Shopping Cart" />
         </a>
       </div>
