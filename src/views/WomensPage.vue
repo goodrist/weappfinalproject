@@ -30,6 +30,16 @@ import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
 import { useRouter } from "vue-router";
+import pennantcrew from '../images/pennantcrew.jpg';
+import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
+import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
+import clubfleecehood from '../images/clubfleecehood.jpg';
+import heavyweighthood from '../images/heavyweighthood.jpg';
+import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
+import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
+import gvbeanie from '../images/gvbeanie.jpg';
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+import lakerstorelogo from '../images/lakerstore-logo.png';
 
 const router = useRouter();
 
@@ -52,7 +62,7 @@ const womensItems: Product[] = [
     id: 'w1',
     name: 'Pennant Crew',
     price: '$49.99',
-    image: './images/pennantcrew.jpg',
+    image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
@@ -61,7 +71,7 @@ const womensItems: Product[] = [
     id: 'w2',
     name: 'Phoenix Fleece Crew',
     price: '$49.99',
-    image: './images/phoenixfleececrew.jpg',
+    image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -70,7 +80,7 @@ const womensItems: Product[] = [
     id: 'w3',
     name: 'Powerblend Sparkle Crew',
     price: '$52.99',
-    image: './images/powerblendsparklescrew.jpg',
+    image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
@@ -79,7 +89,7 @@ const womensItems: Product[] = [
     id: 'w4',
     name: 'Club Fleece Hoodie',
     price: '$54.99',
-    image: './images/clubfleecehood.jpg',
+    image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
@@ -88,7 +98,7 @@ const womensItems: Product[] = [
     id: 'w5',
     name: 'Heavyweight Hoodie',
     price: '$54.99',
-    image: './images/heavyweighthood.jpg',
+    image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['S', 'M', 'L', 'XL'],
@@ -97,7 +107,7 @@ const womensItems: Product[] = [
     id: 'w6',
     name: 'Jersey Long Sleeve Tee',
     price: '$29.99',
-    image: './images/jerseylongsleevetee.jpg',
+    image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
@@ -106,7 +116,7 @@ const womensItems: Product[] = [
     id: 'w7',
     name: 'Rise Swoosh Flex Hat',
     price: '$29.99',
-    image: './images/riseswooshflexhat.jpg',
+    image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
@@ -115,7 +125,7 @@ const womensItems: Product[] = [
     id: 'w8',
     name: 'GVSU Beanie',
     price: '$19.99',
-    image: './images/gvbeanie.jpg',
+    image: gvbeanie,
     tag: 'Beanie',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
@@ -124,7 +134,7 @@ const womensItems: Product[] = [
     id: 'w9',
     name: 'JV St. Johnsbury Tote Bag',
     price: '$34.99',
-    image: './images/jvstjohnsburytotebag.jpg',
+    image: jvstjohnsburytotebag,
     tag: 'Accessory',
     colors: ['Natural Canvas'],
     sizes: ['One Size'],
@@ -133,21 +143,21 @@ const womensItems: Product[] = [
     id: 'w10',
     name: 'Everyday Logo Tee',
     price: '$24.99',
-    image: './images/lakerstore-logo.png',
+    image: lakerstorelogo,
     tag: 'T-Shirt',
   },
   {
     id: 'w11',
     name: 'Game Day Hoodie',
     price: '$54.99',
-    image: './images/clubfleecehood.jpg',
+    image: clubfleecehood,
     tag: 'Hoodie',
   },
   {
     id: 'w12',
     name: 'Cozy Campus Crew',
     price: '$49.99',
-    image: './images/phoenixfleececrew.jpg',
+    image: phoenixfleececrew,
     tag: 'Crewneck',
   },
 ];

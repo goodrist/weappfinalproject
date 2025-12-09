@@ -66,6 +66,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
+import { useRoute, useRouter } from 'vue-router';
+const route = useRoute();
+const router = useRouter();
+
 type Product = {
   id: string;
   name: string;

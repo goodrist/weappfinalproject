@@ -41,7 +41,7 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  select: [ProductItem];
+  (e: 'select', item: ProductItem): void;
 }>();
 </script>
 
@@ -70,5 +70,26 @@ const emit = defineEmits<{
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: #555;
+}
+
+img {
+  min-height: 75%;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
 }
 </style>
