@@ -125,10 +125,6 @@ onUnmounted(() => {
           <img src="/images/cart-icon.png" alt="Shopping Cart" />
         </a>
 
-
-
-          <img src="/images/cart-icon.png" alt="Shopping Cart" />
-        </a>
       </div>
     </div>
 
