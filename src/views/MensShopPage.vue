@@ -18,20 +18,6 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import pennantcrew from '../images/pennantcrew.jpg';
-import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
-import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
-import babytee from '../images/womensImages/babytee.jpg';
-import ProductGrid from '../components/ProductGrid.vue';
-import ProductDetail from '../components/ProductDetail.vue';
-import boyfriendtee from '../images/womensImages/boyfriendtee.jpg';
-import firstdowncroptop from '../images/womensImages/firstdowncroptop.jpg';
-import scoopneckcroptop from '../images/womensImages/scoopneckcroptop.jpg';
-import cutofftank from '../images/womensImages/cutofftank.jpg';
-import uagamedaytee from '../images/womensImages/uagamedaymotiontee.jpg';
-import cutofftank2 from '../images/womensImages/cutofftank2.jpg';
-import comfortwashjrtee from '../images/womensImages/comfortwashjrtee.jpg';
-import clotheslinecroptop from '../images/womensImages/clotheslinecroptee.jpg';
 
 import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';

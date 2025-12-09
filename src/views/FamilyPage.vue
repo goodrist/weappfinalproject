@@ -37,6 +37,10 @@ import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 import lakerstorelogo from '../images/lakerstore-logo.png';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+
 type Product = {
   id: string;
   name: string;
@@ -48,7 +52,7 @@ type Product = {
 };
 
 const onShopClick = () => {
-  alert('Family collection coming soon!');
+  router.push("/family-shop");
 };
 
 const familyItems: Product[] = [
