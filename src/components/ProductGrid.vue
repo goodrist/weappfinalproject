@@ -57,12 +57,11 @@ const emit = defineEmits<{
 
 .product-card {
   text-align: center;
-  padding: 0.5rem;
 }
 
 .product-card img {
   width: 100%;
-  max-width: 180px; /* controls image size */
+  max-width: 180px; /* LIMIT PRODUCT IMAGE SIZE */
   height: auto;
   object-fit: contain;
   display: block;

@@ -171,3 +171,12 @@ const handleAddToCart = (payload: {
   console.log('Add to cart:', payload);
 };
 </script>
+
+.product-card img {
+  width: 100%;
+  max-width: 180px; /* LIMIT PRODUCT IMAGE SIZE */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
