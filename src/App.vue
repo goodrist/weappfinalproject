@@ -72,14 +72,14 @@ onUnmounted(() => {
         <!-- Sign In now also goes to Cart -->
         <a href="#" class="signin" @click.prevent="goToCart">Sign In</a>
         <a href="#" class="cart" @click.prevent="goToCart">
-          <img src="/images/cart-icon.png" alt="Shopping Cart" />
+          <img src="../images/cart-icon.png" alt="Shopping Cart" />
         </a>
       </div>
     </div>
 
     <div class="logo-container">
       <img
-        src="/images/lakerstore-logo.png"
+        src="../images/lakerstore-logo.png"
         alt="GVSU LakerStore Logo"
         class="logo-img"
       />
@@ -107,68 +107,3 @@ onUnmounted(() => {
   <!-- FOOTER (hidden on Cart page) -->
   <FooterBar v-if="currentPage !== 'cart'" />
 </template>
-
-<style scoped>
-/* HEADER LAYOUT */
-.navbar {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom: 1px solid #e2e2e2;
-  background: white;
-}
-
-.top-bar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.right-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.logo-container {
-  margin: 0.5rem 0;
-}
-
-/* FIX HUGE LOGO */
-.logo-img {
-  max-width: 250px;
-  height: auto;
-  display: block;
-}
-
-/* FIX HUGE CART ICON */
-.cart img {
-  width: 40px;
-  height: auto;
-  display: block;
-}
-
-/* NAVIGATION */
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 1rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #0032a0;
-  font-weight: 600;
-}
-
-/* PAGE CONTENT LAYOUT */
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-</style>
