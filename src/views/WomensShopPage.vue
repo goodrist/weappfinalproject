@@ -14,7 +14,7 @@
 
 <script>
 import { ref } from 'vue';
-import TestImg from '/images/Test-Img.png';
+import TestImg from '../Images/Test-Img.png';
 export default {
     name: 'ShopPage',
     setup() {

@@ -46,15 +46,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ProductDetail from '../components/ProductDetail.vue';
-import pennantcrew from '/images/pennantcrew.jpg';
-import phoenixfleececrew from '/images/phoenixfleececrew.jpg';
-import powerblendsparklescrew from '/images/powerblendsparklescrew.jpg';
-import clubfleecehood from '/images/clubfleecehood.jpg';
-import heavyweighthood from '/images/heavyweighthood.jpg';
-import jerseylongsleevetee from '/images/jerseylongsleevetee.jpg';
-import riseswooshflexhat from '/images/riseswooshflexhat.jpg';
-import gvbeanie from '/images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '/images/jvstjohnsburytotebag.jpg';
+import pennantcrew from '../images/pennantcrew.jpg';
+import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
+import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
+import clubfleecehood from '../images/clubfleecehood.jpg';
+import heavyweighthood from '../images/heavyweighthood.jpg';
+import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
+import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
+import gvbeanie from '../images/gvbeanie.jpg';
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 
 
 type Product = {
@@ -171,12 +171,3 @@ const handleAddToCart = (payload: {
   console.log('Add to cart:', payload);
 };
 </script>
-
-.product-card img {
-  width: 100%;
-  max-width: 180px; /* LIMIT PRODUCT IMAGE SIZE */
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}

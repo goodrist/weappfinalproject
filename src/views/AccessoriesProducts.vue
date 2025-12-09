@@ -22,14 +22,14 @@
 import { ref } from "vue";
 
 
-import HatImg from "/images/riseswooshflexhat.jpg";
-import BeanieImg from "/images/gvbeanie.jpg";
-import ToteImg from "/images/jvstjohnsburytotebag.jpg";
-import LogoImg from "/images/lakerstore-logo.png";
-import PinImg from "/images/pennantcrew.jpg";
-import KeychainImg from "/images/phoenixfleececrew.jpg";
-import HoodieImg from "/images/clubfleecehood.jpg";
-import LongSleeveImg from "/images/jerseylongsleevetee.jpg";
+import HatImg from "../images/riseswooshflexhat.jpg";
+import BeanieImg from "../images/gvbeanie.jpg";
+import ToteImg from "../images/jvstjohnsburytotebag.jpg";
+import LogoImg from "../images/lakerstore-logo.png";
+import PinImg from "../images/pennantcrew.jpg";
+import KeychainImg from "../images/phoenixfleececrew.jpg";
+import HoodieImg from "../images/clubfleecehood.jpg";
+import LongSleeveImg from "../images/jerseylongsleevetee.jpg";
 
 export default {
     name: "AccessoriesProducts",
