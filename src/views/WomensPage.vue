@@ -44,7 +44,7 @@ type Product = {
 };
 
 const onShopClick = () => {
-  router.push("/womens");
+  router.push("/womens-shop");
 };
 
 const womensItems: Product[] = [

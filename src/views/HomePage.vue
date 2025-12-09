@@ -20,15 +20,6 @@
         style="cursor: pointer;"
       >
         <img :src="product.image" :alt="product.name" />
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
-        <p class="product-path">test one two three</p>
         <p class="product-name">{{ product.name }}</p>
       </div>
     </div>
