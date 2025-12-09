@@ -21,9 +21,17 @@ import { ref, watch } from 'vue';
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
-import babytee from '../images/babytee.jpg';
+import babytee from '../images/womensImages/babytee.jpg';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import boyfriendtee from '../images/womensImages/boyfriendtee.jpg';
+import firstdowncroptop from '../images/womensImages/firstdowncroptop.jpg';
+import scoopneckcroptop from '../images/womensImages/scoopneckcroptop.jpg';
+import cutofftank from '../images/womensImages/cutofftank.jpg';
+import uagamedaytee from '../images/womensImages/uagamedaymotiontee.jpg';
+import cutofftank2 from '../images/womensImages/cutofftank2.jpg';
+import comfortwashjrtee from '../images/womensImages/comfortwashjrtee.jpg';
+import clotheslinecroptop from '../images/womensImages/clotheslinecroptee.jpg';
 
 
 type Product = {
@@ -69,75 +77,81 @@ const womensItems: Product[] = [
     name: 'Baby Tee',
     price: '$42.99',
     image: babytee,
-    tag: 'Hoodie',
+    tag: 'T-Shirt',
     colors: ['Black'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w5',
-    name: 'Heavyweight Hoodie',
-    price: '$54.99',
-    image: './images/heavyweighthood.jpg',
-    tag: 'Hoodie',
-    colors: ['Heather Gray'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    name: 'Boyfriend Tee',
+    price: '$29.99',
+    image: boyfriendtee,
+    tag: 'T-Shirt',
+    colors: ['Black'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w6',
-    name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
-    image: './images/jerseylongsleevetee.jpg',
-    tag: 'T-Shirt',
-    colors: ['White', 'Royal Blue'],
+    name: 'First Down Crop Top',
+    price: '$26.99',
+    image: firstdowncroptop,
+    tag: 'Crop Top',
+    colors: ['Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w7',
-    name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
-    image: './images/riseswooshflexhat.jpg',
-    tag: 'Hat',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
+    name: 'Scoop Neck Crop Top',
+    price: '$34.99',
+    image: scoopneckcroptop,
+    tag: 'Crop Top',
+    colors: ['Heather Gray', 'Black'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w8',
-    name: 'GVSU Beanie',
-    price: '$19.99',
-    image: './images/gvbeanie.jpg',
-    tag: 'Beanie',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
+    name: 'Cut Off Tank',
+    price: '$42.99',
+    image: cutofftank,
+    tag: 'T-Shirt',
+    colors: ['White'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w9',
-    name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
-    image: './images/jvstjohnsburytotebag.jpg',
-    tag: 'Accessory',
-    colors: ['Natural Canvas'],
-    sizes: ['One Size'],
+    name: 'Under Armour Game Day Tee',
+    price: '$46.99',
+    image: uagamedaytee,
+    tag: 'T-Shirt',
+    colors: ['Oxford'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
     id: 'w10',
-    name: 'Everyday Logo Tee',
-    price: '$24.99',
-    image: './images/lakerstore-logo.png',
+    name: 'Cut Off Tank',
+    price: '$42.99',
+    image: cutofftank2,
     tag: 'T-Shirt',
+    colors: ['Black'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL']
   },
   {
     id: 'w11',
-    name: 'Game Day Hoodie',
-    price: '$54.99',
-    image: './images/clubfleecehood.jpg',
+    name: 'Comfort Wash Jr Tee',
+    price: '$24.99',
+    image: comfortwashjrtee,
     tag: 'Hoodie',
+    colors: ['Light Blue'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL']
   },
   {
     id: 'w12',
-    name: 'Cozy Campus Crew',
-    price: '$49.99',
-    image: './images/phoenixfleececrew.jpg',
-    tag: 'Crewneck',
+    name: 'Clothesline Crop Tee',
+    price: '$29.99',
+    image: clotheslinecroptop,
+    tag: 'Crop Top',
+    colors: ['White'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL']
   },
 ];
 
