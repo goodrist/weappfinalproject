@@ -5,6 +5,7 @@
       <h1>Women’s Laker Gear</h1>
       <p>Crops, crews, and cozy layers for every Laker.</p>
       <a href="#" class="shop-btn" @click.prevent="onShopClick">Shop Women’s</a>
+      <button @click="$router.push('/mens-shop')">Go to Mens Shop</button>
     </div>
   </section>
 

@@ -18,6 +18,8 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
+import ProductGrid from '../components/ProductGrid.vue';
+import ProductDetail from '../components/ProductDetail.vue';
 
 import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';
