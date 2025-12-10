@@ -1,5 +1,5 @@
 <template>
-     <ProductGrid
+  <ProductGrid
     v-if="!selectedItem"
     title="Featured Products"
     :items="featuredProducts.slice(0, 6)"
@@ -15,9 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useCartStore } from "../stores/cartStore";
 
 import bowclip from '../images/accessoriesimages/bowclip.jpg';
 import bluebeads from '../images/accessoriesimages/bluebeads.jpg';
@@ -31,6 +32,8 @@ import jvstjohnsburytotebag from '../images/accessoriesimages/jvstjohnsburytoteb
 import primetimehat from '../images/accessoriesimages/primetimehat.jpg';
 import luxescrunchie from '../images/accessoriesimages/luxescrunchie.jpg';
 import z11hat from '../images/accessoriesimages/z11hat.jpg';
+
+const cart = useCartStore();
 
 type Product = {
   id: string;
@@ -155,6 +158,19 @@ const handleAddToCart = (payload: {
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Accessories:', payload);
+
+  // 🔥 Add the item to the global cart store
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  // Return to product grid
+  selectedItem.value = null;
 };
 </script>
