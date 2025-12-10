@@ -48,6 +48,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 const onShopClick = () => {
@@ -63,6 +64,7 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'heavyweight-hoodie',
@@ -72,6 +74,7 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'jersey-long-sleeve',
@@ -81,6 +84,7 @@ const featuredProducts: Product[] = [
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
 ];
 

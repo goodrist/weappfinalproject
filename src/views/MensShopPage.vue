@@ -46,116 +46,129 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 const mensItems: Product[] = [
   {
-    id: 'w1',
+    id: 'club-fleece',
     name: 'Club Fleece Hoodie',
     price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w2',
+    id: 'heavyweight-hoodie',
     name: 'Heavyweight Hoodie',
     price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
-    colors: ['Royal Blue'],
+    colors: ['Heather Gray'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w3',
+    id: 'jersey-long-sleeve',
     name: 'Jersey Long Sleeve Tee',
     price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
-    colors: ['Royal Blue', 'White'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['White', 'Royal Blue'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w4',
+    id: 'nike-legend-tee',
     name: 'Nike Legend Tee',
     price: '42.99',
     image: nikelegendtee,
     tag: 'T-Shirt',
     colors: ['Dark Gray'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w5',
+    id: 'athletic-soft-touch-tee',
     name: 'Athletic Soft Touch Tee',
     price: '39.99',
     image: athleticsofttouctee,
     tag: 'T-Shirt',
     colors: ['Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w6',
+    id: 'adidas-creator-tee',
     name: 'Adidas Creator Tee',
     price: '42.99',
     image: adidascreatortee,
     tag: 'T-Shirt',
     colors: ['Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w7',
+    id: 'nike-legend-tee',
     name: 'Nike Legend Tee',
     price: '42.99',
     image: nikelegendtee2,
     tag: 'T-Shirt',
     colors: ['Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w8',
+    id: 'all-american-tee',
     name: 'All American Tee',
     price: '29.99',
     image: allamericantee,
     tag: 'T-Shirt',
     colors: ['White'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w9',
+    id: 'nantucket-fleece',
     name: 'Nantucket Fleece',
     price: '42.99',
     image: nantucketfleece,
     tag: 'Crewneck',
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'men'
   },
   {
-    id: 'w10',
+    id: 'wessential-fleece-hood',
     name: 'Essential Fleece Hood',
     price: '62.99',
     image: essentialfleecehood,
     tag: 'Hoodie',
     colors: ['Oatmeal'],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    category: 'men'
   },
   {
-    id: 'w11',
+    id: 'hood',
     name: 'Hood',
     price: '42.99',
     image: hood,
     tag: 'Hoodie',
     colors: ['Black'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'men'
   },
   {
-    id: 'w12',
+    id: 'gvsu-hood',
     name: 'GVSU Hood',
     price: '46.99',
     image: gvsuhood,
     tag: 'Hoodie',
     colors: ['White'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'men'
   },
 ];
 

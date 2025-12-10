@@ -55,6 +55,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 // Button click → route to full shop page
@@ -65,106 +66,119 @@ const onShopClick = () => {
 // Women’s product list
 const womensItems: Product[] = [
   {
-    id: 'w1',
+    id: 'pennant-crew',
     name: 'Pennant Crew',
     price: '49.99',
     image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w2',
+    id: 'phoenix-fleece',
     name: 'Phoenix Fleece Crew',
     price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w3',
+    id: 'sparkle-crew',
     name: 'Powerblend Sparkle Crew',
     price: '52.99',
     image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w4',
+    id: 'club-fleece',
     name: 'Club Fleece Hoodie',
     price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w5',
+    id: 'heavyweight-hoodie',
     name: 'Heavyweight Hoodie',
     price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w6',
+    id: 'jersey-long-sleeve',
     name: 'Jersey Long Sleeve Tee',
     price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w7',
+    id: 'rise-swoosh',
     name: 'Rise Swoosh Flex Hat',
     price: '29.99',
     image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
-    id: 'w8',
+    id: 'gv-beanie',
     name: 'GVSU Beanie',
     price: '19.99',
     image: gvbeanie,
     tag: 'Beanie',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
-    id: 'w9',
+    id: 'jv-tote',
     name: 'JV St. Johnsbury Tote Bag',
     price: '34.99',
     image: jvstjohnsburytotebag,
     tag: 'Accessory',
     colors: ['Natural Canvas'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
-    id: 'w10',
+    id: 'everyday-logo-tee',
     name: 'Everyday Logo Tee',
     price: '24.99',
     image: lakerstorelogo,
     tag: 'T-Shirt',
+    category: 'women'
   },
   {
-    id: 'w11',
+    id: 'game-day-hoodie',
     name: 'Game Day Hoodie',
     price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
+    category: 'women'
+    
   },
   {
-    id: 'w12',
+    id: 'cozy-campus-crew',
     name: 'Cozy Campus Crew',
     price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
+    category: 'women'
   },
 ];
 

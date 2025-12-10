@@ -50,6 +50,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 const onShopClick = () => {
@@ -63,6 +64,7 @@ const featuredProducts: Product[] = [
     name: 'Alumni Sticker',
     price: '5.99',
     image: alumnisticker,
+    category: 'alumni'
   },
   {
     id: 'alumni-hood',
@@ -72,18 +74,21 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'alumni'
   },
   {
     id: 'alumni-walldecor',
     name: 'Alumni Wall Decor',
     price: '16.00',
     image: alumniwalldecor,
+    category: 'alumni'
   },
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
     price: '18.99',
     image: GVAlumni,
+    category: 'alumni'
   },
   {
     id: 'ladies-stretch-polo',
@@ -92,6 +97,7 @@ const featuredProducts: Product[] = [
     image: LadiestretchPolo,
     colors: ['Grey', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'alumni'
   },
 ];
 

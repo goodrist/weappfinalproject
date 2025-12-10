@@ -54,6 +54,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 // Shop button route
@@ -71,6 +72,7 @@ const featuredProducts: Product[] = [
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'phoenix-fleece',
@@ -80,6 +82,7 @@ const featuredProducts: Product[] = [
     tag: 'Crewneck',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'sparkle-crew',
@@ -89,6 +92,7 @@ const featuredProducts: Product[] = [
     tag: 'Crewneck',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'club-fleece',
@@ -98,6 +102,7 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'heavyweight-hoodie',
@@ -107,6 +112,7 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'jersey-long-sleeve',
@@ -116,6 +122,7 @@ const featuredProducts: Product[] = [
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
     id: 'rise-swoosh',
@@ -125,6 +132,7 @@ const featuredProducts: Product[] = [
     tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
     id: 'gv-beanie',
@@ -134,6 +142,7 @@ const featuredProducts: Product[] = [
     tag: 'Beanie',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
     id: 'jv-tote',
@@ -143,6 +152,7 @@ const featuredProducts: Product[] = [
     tag: 'Accessory',
     colors: ['Natural Canvas'],
     sizes: ['One Size'],
+    category: 'home'
   },
 ];
 

@@ -45,6 +45,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 const familyItems: Product[] = [
@@ -56,6 +57,7 @@ const familyItems: Product[] = [
     tag: 'Crewneck',
     colors: ['Tan'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'family'
   },
   {
     id: 'w2',
@@ -65,6 +67,7 @@ const familyItems: Product[] = [
     tag: 'T-Shirt',
     colors: ['White'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w3',
@@ -74,6 +77,7 @@ const familyItems: Product[] = [
     tag: 'Polo',
     colors: ['Black'],
     sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w4',
@@ -81,6 +85,7 @@ const familyItems: Product[] = [
     price: '16.99',
     image: gvmommug,
     tag: 'Mug',
+    category: 'family'
   },
   {
     id: 'w5',
@@ -90,6 +95,7 @@ const familyItems: Product[] = [
     tag: 'T-Shirt',
     colors: ['Navy'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w6',
@@ -99,6 +105,7 @@ const familyItems: Product[] = [
     tag: 'Hat',
     colors: ['Black'],
     sizes: ['One Size'],
+    category: 'family'
   },
   {
     id: 'w7',
@@ -108,6 +115,7 @@ const familyItems: Product[] = [
     tag: 'Quarter-Zip',
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w8',
@@ -117,6 +125,7 @@ const familyItems: Product[] = [
     tag: 'Crew',
     colors: ['Dark Gray'],
     sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w9',
@@ -126,6 +135,7 @@ const familyItems: Product[] = [
     tag: 'Crewneck',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'family'
   },
   {
     id: 'w10',
@@ -134,7 +144,8 @@ const familyItems: Product[] = [
     image: sistertee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL']
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'family'
   },
   {
     id: 'w11',
@@ -143,7 +154,8 @@ const familyItems: Product[] = [
     image: brothertee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL']
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    category: 'family'
   },
   {
     id: 'w12',
@@ -152,7 +164,8 @@ const familyItems: Product[] = [
     image: youtharmourfleecehood,
     tag: 'Hoodie',
     colors: ['Oxford'],
-    sizes: ['YS', 'YM', 'YL', 'YXL']
+    sizes: ['YS', 'YM', 'YL', 'YXL'],
+    category: 'family'
   },
 ];
 

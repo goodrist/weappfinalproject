@@ -57,6 +57,7 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 // Button link
@@ -72,12 +73,14 @@ const featuredProducts: Product[] = [
     price: '12.99',
     image: bowclip,
     tag: 'hairclip',
+    category: 'accessory'
   },
   {
     id: 'blue-beads',
     name: 'Blue Beads',
     price: '1.50',
     image: bluebeads,
+    category: 'accessory'
   },
   {
     id: 'royal-gvbandana',
@@ -86,6 +89,7 @@ const featuredProducts: Product[] = [
     image: gvbandana,
     colors: ['blue'],
     sizes: ['ONESIZE'],
+    category: 'accessory'
   },
   {
     id: 'club-fleece',
@@ -95,12 +99,14 @@ const featuredProducts: Product[] = [
     tag: 'Hoodie',
     colors: ['White', 'Blue'],
     sizes: ['ONE SIZE'],
+    category: 'home'
   },
   {
     id: 'gvsu-goldtoned-necklace',
     name: 'GVSU Gold Toned Necklace',
     price: '21.99',
     image: gvsugoldtonednecklace,
+    category: 'accessory'
   },
   {
     id: 'johnsbury-totebag',
@@ -109,6 +115,7 @@ const featuredProducts: Product[] = [
     image: jvstjohnsburytotebag,
     tag: 'Tote-Bag',
     colors: ['Black'],
+    category: 'accessory'
   },
   {
     id: 'rise-swoosh',
@@ -118,6 +125,7 @@ const featuredProducts: Product[] = [
     tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
     id: 'gv-beanie',
@@ -127,6 +135,7 @@ const featuredProducts: Product[] = [
     tag: 'Beanie',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'home'
   },
   {
     id: 'plush-yarnsock',
@@ -136,6 +145,7 @@ const featuredProducts: Product[] = [
     tag: 'plushyarnsock',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'accessory'
   },
   {
     id: 'z11-hat',
@@ -145,6 +155,7 @@ const featuredProducts: Product[] = [
     tag: 'hat',
     colors: ['Black'],
     sizes: ['One Size'],
+    category: 'accessory'
   },
   {
     id: 'luxe-scrunchie',
@@ -154,6 +165,7 @@ const featuredProducts: Product[] = [
     tag: 'scrunchie',
     colors: ['Royal Blue', 'White'],
     sizes: ['One Size'],
+    category: 'accessory'
   },
   {
     id: 'primetime-hat',
@@ -163,6 +175,7 @@ const featuredProducts: Product[] = [
     tag: 'Beanie',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
+    category: 'accessory'
   },
 ];
 

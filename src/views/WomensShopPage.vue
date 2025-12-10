@@ -47,116 +47,129 @@ type Product = {
   tag?: string;
   colors?: string[];
   sizes?: string[];
+  category: string;
 };
 
 const womensItems: Product[] = [
   {
-    id: 'w1',
+    id: 'pennant-crew',
     name: 'Pennant Crew',
     price: '49.99',
     image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w2',
+    id: 'phoenix-fleece',
     name: 'Phoenix Fleece Crew',
     price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w3',
+    id: 'sparkle-crew',
     name: 'Powerblend Sparkle Crew',
     price: '52.99',
     image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
+    category: 'home'
   },
   {
-    id: 'w4',
+    id: 'baby-tee',
     name: 'Baby Tee',
     price: '42.99',
     image: babytee,
     tag: 'T-Shirt',
     colors: ['Black'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],\
+    category: 'women'
   },
   {
-    id: 'w5',
+    id: 'boyfriend-tee',
     name: 'Boyfriend Tee',
     price: '29.99',
     image: boyfriendtee,
     tag: 'T-Shirt',
     colors: ['Black'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w6',
+    id: 'first-down-crop-top',
     name: 'First Down Crop Top',
     price: '26.99',
     image: firstdowncroptop,
     tag: 'Crop Top',
     colors: ['Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w7',
+    id: 'scoop-neck-crop-top',
     name: 'Scoop Neck Crop Top',
     price: '34.99',
     image: scoopneckcroptop,
     tag: 'Crop Top',
     colors: ['Heather Gray', 'Black'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w8',
+    id: 'cut-off-tank',
     name: 'Cut Off Tank',
     price: '42.99',
     image: cutofftank,
     tag: 'T-Shirt',
     colors: ['White'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w9',
+    id: 'under-armour-game-day-tee',
     name: 'Under Armour Game Day Tee',
     price: '46.99',
     image: uagamedaytee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w10',
+    id: 'cut-off-tank',
     name: 'Cut Off Tank',
     price: '42.99',
     image: cutofftank2,
     tag: 'T-Shirt',
     colors: ['Black'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL']
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w11',
+    id: 'comfort-wash-jr-tee',
     name: 'Comfort Wash Jr Tee',
     price: '24.99',
     image: comfortwashjrtee,
     tag: 'Hoodie',
     colors: ['Light Blue'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL']
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
   {
-    id: 'w12',
+    id: 'clothesline-crop-top',
     name: 'Clothesline Crop Tee',
     price: '29.99',
     image: clotheslinecroptop,
     tag: 'Crop Top',
     colors: ['White'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL']
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    category: 'women'
   },
 ];
 
