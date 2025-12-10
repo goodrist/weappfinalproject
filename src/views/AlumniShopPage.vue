@@ -22,7 +22,7 @@ import ProductDetail from '../components/ProductDetail.vue';
 import alumnihood from '../images/alumniImages/alumnihood.jpg';
 import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
-import championalumnihoodie from '../images/alumniImages/championalumnihood.jpg';
+import championalumnihoodie from '../images/alumniImages/championalumhood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
 import LadiestrecthPolo from '../images/alumniImages/LadiestrecthPolo.jpg';
 
