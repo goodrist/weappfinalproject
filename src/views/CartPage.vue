@@ -188,19 +188,24 @@
 </template>
 
 <script setup lang="ts">
-import { useCartStore } from "../stores/cartStore";
+import { computed } from "vue";
+import { useCartStore } from "@/stores/cartStore";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { db } from "../firebase/firebase";
+import { db } from "@/firebase/firebase";
 
 // Load cart store
 const cart = useCartStore();
 
-// Subtotal computed value
-const subtotal = cart.items.reduce((sum, item) => sum + item.price * item.qty, 0);
+// Reactive subtotal
+const subtotal = computed(() =>
+  cart.items.reduce((sum, item) => sum + item.price * item.qty, 0)
+);
 
-// FAKE CHECKOUT FUNCTION
+// Fake checkout handler
 async function handleFakeCheckout() {
+  console.log("CHECKOUT CLICKED");
+
   const auth = getAuth();
   const user = auth.currentUser;
 
@@ -209,23 +214,26 @@ async function handleFakeCheckout() {
     return;
   }
 
-  // Create order object
   const order = {
     userId: user.uid,
     items: cart.items,
-    total: subtotal,
+    total: subtotal.value,
     createdAt: serverTimestamp(),
   };
 
-  // Save order to Firestore
-  await addDoc(collection(db, "orders"), order);
-
-  // Clear cart
-  if (cart.clearCart) {
-    cart.clearCart();
+  try {
+    await addDoc(collection(db, "orders"), order);
+    console.log("Order saved");
+  } catch (err) {
+    console.error("Checkout failed:", err);
+    alert("Could not complete checkout. Check console.");
+    return;
   }
 
-  // Redirect
+  // Clear cart
+  cart.clearCart?.();
+
+  // Redirect to success page
   window.location.href = "/success";
 }
 </script>
