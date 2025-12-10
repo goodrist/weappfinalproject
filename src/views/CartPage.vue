@@ -234,7 +234,7 @@ async function handleFakeCheckout() {
   cart.clearCart?.();
 
   // Redirect to success page
-  window.location.href = import.meta.env.BASE_URL + "success";
+window.open("payment-success.html", "_blank");
 
 }
 </script>
