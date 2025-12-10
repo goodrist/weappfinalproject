@@ -92,7 +92,7 @@ const athleticItems: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   
-  /**
+  /*
   {
     id: 'w6',
     name: 'Soccer Tee',

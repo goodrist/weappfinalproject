@@ -73,6 +73,7 @@ const featuredProducts: Product[] = [
     price: '$16.00',
     image: alumniwalldecor,
   },
+
   /**
   {
     id: 'championalum-hood',
@@ -84,6 +85,7 @@ const featuredProducts: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   */
+
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
