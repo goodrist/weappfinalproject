@@ -27,15 +27,12 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
-import pennantcrew from '../images/pennantcrew.jpg';
-import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
-import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
-import clubfleecehood from '../images/clubfleecehood.jpg';
-import heavyweighthood from '../images/heavyweighthood.jpg';
-import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
-import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
-import gvbeanie from '../images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+import alumnihood from '../images/alumniImages/alumnihood.jpg';
+import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
+import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
+import championalumnihoodie from '../images/alumniImages/championalumnihoodie.jpg';
+import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
+import LadiestrecthPolo from '../images/alumniImages/LadiestrecthPolo.jpg';
 
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -56,85 +53,48 @@ const onShopClick = () => {
 
 const featuredProducts: Product[] = [
   {
-    id: 'pennant-crew',
-    name: 'Pennant Crew',
-    price: '$49.99',
-    image: pennantcrew,
-    tag: 'Crewneck',
-    colors: ['Heather Gray', 'Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'alumni-sticker',
+    name: 'Alumni Sticker',
+    price: '$5.99',
+    image: alumnisticker,
   },
   {
-    id: 'phoenix-fleece',
-    name: 'Phoenix Fleece Crew',
-    price: '$49.99',
-    image: phoenixfleececrew,
-    tag: 'Crewneck',
+    id: 'alumni-hood',
+    name: 'Alumni Hood',
+    price: '$39.99',
+    image: alumnihood,
+    tag: 'Hoodie',
     colors: ['Heather Gray'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'sparkle-crew',
-    name: 'Powerblend Sparkle Crew',
-    price: '$52.99',
-    image: powerblendsparklescrew,
-    tag: 'Crewneck',
-    colors: ['Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'alumni-walldecor',
+    name: 'Alumni Wall Decor',
+    price: '$16.00',
+    image: alumniwalldecor,
   },
   {
-    id: 'club-fleece',
-    name: 'Club Fleece Hoodie',
-    price: '$54.99',
-    image: clubfleecehood,
+    id: 'championalum-hood',
+    name: 'Champion Alumni Hood',
+    price: '$49.99',
+    image: championalumnihoodie,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'heavyweight-hoodie',
-    name: 'Heavyweight Hoodie',
-    price: '$54.99',
-    image: heavyweighthood,
-    tag: 'Hoodie',
-    colors: ['Heather Gray'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'Gv-Alumni Mug',
+    name: 'GV Alumni 20oz Mug',
+    price: '$18.99',
+    image: GVAlumni,
   },
   {
-    id: 'jersey-long-sleeve',
-    name: 'Jersey Long Sleeve Tee',
+    id: 'ladies-strecth-polo',
+    name: 'Ladies Stretch Polo Shirt',
     price: '$29.99',
-    image: jerseylongsleevetee,
-    tag: 'T-Shirt',
-    colors: ['White', 'Royal Blue'],
+    image: LadiestrecthPolo,
+    colors: ['Grey', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
-  },
-  {
-    id: 'rise-swoosh',
-    name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
-    image: riseswooshflexhat,
-    tag: 'Hat',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'gv-beanie',
-    name: 'GVSU Beanie',
-    price: '$19.99',
-    image: gvbeanie,
-    tag: 'Beanie',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'jv-tote',
-    name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
-    image: jvstjohnsburytotebag,
-    tag: 'Accessory',
-    colors: ['Natural Canvas'],
-    sizes: ['One Size'],
   },
 ];
 
