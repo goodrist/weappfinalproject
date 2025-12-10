@@ -234,7 +234,7 @@ async function handleFakeCheckout() {
   cart.clearCart?.();
 
   // Redirect to success page
-window.open("payment-success.html", "_blank");
+alert("Order saved and successful!");
 
 }
 </script>
