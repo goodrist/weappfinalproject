@@ -18,9 +18,5 @@ const pinia = createPinia();
 app.use(pinia);
 app.use(router);
 
-// Initialize Firebase auth listener
-const authStore = useAuthStore();
-authStore.init();
-
 // Mount app
 app.mount("#app");
