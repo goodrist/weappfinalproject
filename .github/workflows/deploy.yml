@@ -25,6 +25,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_BASE_URL: /webappfinalproject/       # ⭐ ADD THIS
         run: npm run build
 
       - name: Upload artifact
