@@ -68,7 +68,7 @@ const featuredProducts: Product[] = [
   {
     id: 'pennant-crew',
     name: 'Pennant Crew',
-    price: '$49.99',
+    price: '49.99',
     image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
@@ -77,7 +77,7 @@ const featuredProducts: Product[] = [
   {
     id: 'phoenix-fleece',
     name: 'Phoenix Fleece Crew',
-    price: '$49.99',
+    price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
@@ -86,7 +86,7 @@ const featuredProducts: Product[] = [
   {
     id: 'sparkle-crew',
     name: 'Powerblend Sparkle Crew',
-    price: '$52.99',
+    price: '52.99',
     image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
@@ -95,7 +95,7 @@ const featuredProducts: Product[] = [
   {
     id: 'club-fleece',
     name: 'Club Fleece Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -104,7 +104,7 @@ const featuredProducts: Product[] = [
   {
     id: 'heavyweight-hoodie',
     name: 'Heavyweight Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
@@ -113,7 +113,7 @@ const featuredProducts: Product[] = [
   {
     id: 'jersey-long-sleeve',
     name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
+    price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
@@ -122,7 +122,7 @@ const featuredProducts: Product[] = [
   {
     id: 'rise-swoosh',
     name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
+    price: '29.99',
     image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
@@ -131,7 +131,7 @@ const featuredProducts: Product[] = [
   {
     id: 'gv-beanie',
     name: 'GVSU Beanie',
-    price: '$19.99',
+    price: '19.99',
     image: gvbeanie,
     tag: 'Beanie',
     colors: ['Royal Blue'],
@@ -140,7 +140,7 @@ const featuredProducts: Product[] = [
   {
     id: 'jv-tote',
     name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
+    price: '34.99',
     image: jvstjohnsburytotebag,
     tag: 'Accessory',
     colors: ['Natural Canvas'],

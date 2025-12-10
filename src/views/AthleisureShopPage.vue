@@ -49,7 +49,7 @@ const athleticItems: Product[] = [
   {
     id: 'w1',
     name: 'Basketball Tee',
-    price: '$21.99',
+    price: '21.99',
     image: basketballtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -58,7 +58,7 @@ const athleticItems: Product[] = [
   {
     id: 'w2',
     name: 'Cross Country Tee',
-    price: '$21.99',
+    price: '21.99',
     image: crosscountrytee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -67,7 +67,7 @@ const athleticItems: Product[] = [
   {
     id: 'w3',
     name: 'Football Tee',
-    price: '$21.99',
+    price: '21.99',
     image: footballtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -76,7 +76,7 @@ const athleticItems: Product[] = [
   {
     id: 'w4',
     name: 'Golf Tee',
-    price: '$21.99',
+    price: '21.99',
     image: golftee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -85,7 +85,7 @@ const athleticItems: Product[] = [
   {
     id: 'w5',
     name: 'Lacrosse Tee',
-    price: '$21.99',
+    price: '21.99',
     image: lacrossetee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -95,7 +95,7 @@ const athleticItems: Product[] = [
   {
     id: 'w6',
     name: 'Soccer Tee',
-    price: '$21.99',
+    price: '21.99',
     image: soccertee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -104,7 +104,7 @@ const athleticItems: Product[] = [
   {
     id: 'w7',
     name: 'Softball Tee',
-    price: '$21.99',
+    price: '21.99',
     image: softballtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -113,7 +113,7 @@ const athleticItems: Product[] = [
   {
     id: 'w8',
     name: 'Swim & Dive Tee',
-    price: '$21.99',
+    price: '21.99',
     image: swimdivetee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -122,7 +122,7 @@ const athleticItems: Product[] = [
   {
     id: 'w9',
     name: 'Tennis Tee',
-    price: '$21.99',
+    price: '21.99',
     image: tennistee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -131,7 +131,7 @@ const athleticItems: Product[] = [
   {
     id: 'w10',
     name: 'Track & Field Tee',
-    price: '$21.99',
+    price: '21.99',
     image: trackfieldtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -140,7 +140,7 @@ const athleticItems: Product[] = [
   {
     id: 'w11',
     name: 'Volleyball Tee',
-    price: '$21.99',
+    price: '21.99',
     image: volleyballtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -149,7 +149,7 @@ const athleticItems: Product[] = [
   {
     id: 'w12',
     name: 'Wrestling Tee',
-    price: '$21.99',
+    price: '21.99',
     image: wrestlingtee,
     tag: 'T-Shirt',
     colors: ['Oxford'],

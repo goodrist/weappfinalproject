@@ -49,7 +49,7 @@ const familyItems: Product[] = [
   {
     id: 'w1',
     name: 'Champion Mom Powerblend Crew',
-    price: '$54.99',
+    price: '54.99',
     image: championmompowerblendcrew,
     tag: 'Crewneck',
     colors: ['Tan'],
@@ -58,7 +58,7 @@ const familyItems: Product[] = [
   {
     id: 'w2',
     name: 'Champion Mom Jersey Tee',
-    price: '$21.99',
+    price: '21.99',
     image: championmomjerseytee,
     tag: 'T-Shirt',
     colors: ['White'],
@@ -67,7 +67,7 @@ const familyItems: Product[] = [
   {
     id: 'w3',
     name: 'Ladies Coastline Epic Polo',
-    price: '$66.99',
+    price: '66.99',
     image: ladiescoastlineepicpolo,
     tag: 'Polo',
     colors: ['Black'],
@@ -76,14 +76,14 @@ const familyItems: Product[] = [
   {
     id: 'w4',
     name: 'GV Mom Mug 16oz',
-    price: '$16.99',
+    price: '16.99',
     image: gvmommug,
     tag: 'Mug',
   },
   {
     id: 'w5',
     name: 'Dad Tee',
-    price: '$24.99',
+    price: '24.99',
     image: dadtee,
     tag: 'T-Shirt',
     colors: ['Navy'],
@@ -92,7 +92,7 @@ const familyItems: Product[] = [
   {
     id: 'w6',
     name: 'Relaxed Twill Dad Hat',
-    price: '$24.99',
+    price: '24.99',
     image: relaxedtwilldadhat,
     tag: 'Hat',
     colors: ['Black'],
@@ -101,7 +101,7 @@ const familyItems: Product[] = [
   {
     id: 'w7',
     name: 'Coastline Epic Zip Hood',
-    price: '$64.99',
+    price: '64.99',
     image: coastlineepiczip,
     tag: 'Quarter-Zip',
     colors: ['Oxford'],
@@ -110,7 +110,7 @@ const familyItems: Product[] = [
   {
     id: 'w8',
     name: 'Grandpa Crew',
-    price: '$42.99',
+    price: '42.99',
     image: grandpacrecrew,
     tag: 'Crew',
     colors: ['Dark Gray'],
@@ -119,7 +119,7 @@ const familyItems: Product[] = [
   {
     id: 'w9',
     name: 'Grandma Crew',
-    price: '$44.99',
+    price: '44.99',
     image: grandmacrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
@@ -128,7 +128,7 @@ const familyItems: Product[] = [
   {
     id: 'w10',
     name: 'Sister Tee',
-    price: '$21.99',
+    price: '21.99',
     image: sistertee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -137,7 +137,7 @@ const familyItems: Product[] = [
   {
     id: 'w11',
     name: 'Brother Tee',
-    price: '$21.99',
+    price: '21.99',
     image: brothertee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -146,7 +146,7 @@ const familyItems: Product[] = [
   {
     id: 'w12',
     name: 'Youth Armour Fleece Hood',
-    price: '$56.99',
+    price: '56.99',
     image: youtharmourfleecehood,
     tag: 'Hoodie',
     colors: ['Oxford'],

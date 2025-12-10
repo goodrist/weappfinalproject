@@ -48,7 +48,7 @@ const womensItems: Product[] = [
   {
     id: 'w1',
     name: 'Pennant Crew',
-    price: '$49.99',
+    price: '49.99',
     image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
@@ -57,7 +57,7 @@ const womensItems: Product[] = [
   {
     id: 'w2',
     name: 'Phoenix Fleece Crew',
-    price: '$49.99',
+    price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
@@ -66,7 +66,7 @@ const womensItems: Product[] = [
   {
     id: 'w3',
     name: 'Powerblend Sparkle Crew',
-    price: '$52.99',
+    price: '52.99',
     image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
@@ -75,7 +75,7 @@ const womensItems: Product[] = [
   {
     id: 'w4',
     name: 'Baby Tee',
-    price: '$42.99',
+    price: '42.99',
     image: babytee,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -84,7 +84,7 @@ const womensItems: Product[] = [
   {
     id: 'w5',
     name: 'Boyfriend Tee',
-    price: '$29.99',
+    price: '29.99',
     image: boyfriendtee,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -93,7 +93,7 @@ const womensItems: Product[] = [
   {
     id: 'w6',
     name: 'First Down Crop Top',
-    price: '$26.99',
+    price: '26.99',
     image: firstdowncroptop,
     tag: 'Crop Top',
     colors: ['Royal Blue'],
@@ -102,7 +102,7 @@ const womensItems: Product[] = [
   {
     id: 'w7',
     name: 'Scoop Neck Crop Top',
-    price: '$34.99',
+    price: '34.99',
     image: scoopneckcroptop,
     tag: 'Crop Top',
     colors: ['Heather Gray', 'Black'],
@@ -111,7 +111,7 @@ const womensItems: Product[] = [
   {
     id: 'w8',
     name: 'Cut Off Tank',
-    price: '$42.99',
+    price: '42.99',
     image: cutofftank,
     tag: 'T-Shirt',
     colors: ['White'],
@@ -120,7 +120,7 @@ const womensItems: Product[] = [
   {
     id: 'w9',
     name: 'Under Armour Game Day Tee',
-    price: '$46.99',
+    price: '46.99',
     image: uagamedaytee,
     tag: 'T-Shirt',
     colors: ['Oxford'],
@@ -129,7 +129,7 @@ const womensItems: Product[] = [
   {
     id: 'w10',
     name: 'Cut Off Tank',
-    price: '$42.99',
+    price: '42.99',
     image: cutofftank2,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -138,7 +138,7 @@ const womensItems: Product[] = [
   {
     id: 'w11',
     name: 'Comfort Wash Jr Tee',
-    price: '$24.99',
+    price: '24.99',
     image: comfortwashjrtee,
     tag: 'Hoodie',
     colors: ['Light Blue'],
@@ -147,7 +147,7 @@ const womensItems: Product[] = [
   {
     id: 'w12',
     name: 'Clothesline Crop Tee',
-    price: '$29.99',
+    price: '29.99',
     image: clotheslinecroptop,
     tag: 'Crop Top',
     colors: ['White'],

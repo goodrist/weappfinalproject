@@ -60,7 +60,7 @@ const womensItems: Product[] = [
   {
     id: 'w1',
     name: 'Pennant Crew',
-    price: '$49.99',
+    price: '49.99',
     image: pennantcrew,
     tag: 'Crewneck',
     colors: ['Heather Gray', 'Royal Blue'],
@@ -69,7 +69,7 @@ const womensItems: Product[] = [
   {
     id: 'w2',
     name: 'Phoenix Fleece Crew',
-    price: '$49.99',
+    price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
     colors: ['Heather Gray'],
@@ -78,7 +78,7 @@ const womensItems: Product[] = [
   {
     id: 'w3',
     name: 'Powerblend Sparkle Crew',
-    price: '$52.99',
+    price: '52.99',
     image: powerblendsparklescrew,
     tag: 'Crewneck',
     colors: ['Royal Blue'],
@@ -87,7 +87,7 @@ const womensItems: Product[] = [
   {
     id: 'w4',
     name: 'Club Fleece Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -96,7 +96,7 @@ const womensItems: Product[] = [
   {
     id: 'w5',
     name: 'Heavyweight Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
@@ -105,7 +105,7 @@ const womensItems: Product[] = [
   {
     id: 'w6',
     name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
+    price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
@@ -114,7 +114,7 @@ const womensItems: Product[] = [
   {
     id: 'w7',
     name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
+    price: '29.99',
     image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
@@ -123,7 +123,7 @@ const womensItems: Product[] = [
   {
     id: 'w8',
     name: 'GVSU Beanie',
-    price: '$19.99',
+    price: '19.99',
     image: gvbeanie,
     tag: 'Beanie',
     colors: ['Royal Blue'],
@@ -132,7 +132,7 @@ const womensItems: Product[] = [
   {
     id: 'w9',
     name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
+    price: '34.99',
     image: jvstjohnsburytotebag,
     tag: 'Accessory',
     colors: ['Natural Canvas'],
@@ -141,21 +141,21 @@ const womensItems: Product[] = [
   {
     id: 'w10',
     name: 'Everyday Logo Tee',
-    price: '$24.99',
+    price: '24.99',
     image: lakerstorelogo,
     tag: 'T-Shirt',
   },
   {
     id: 'w11',
     name: 'Game Day Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
   },
   {
     id: 'w12',
     name: 'Cozy Campus Crew',
-    price: '$49.99',
+    price: '49.99',
     image: phoenixfleececrew,
     tag: 'Crewneck',
   },

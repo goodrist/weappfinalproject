@@ -57,7 +57,7 @@ const featuredProducts: Product[] = [
   {
     id: 'club-fleece',
     name: 'Club Fleece Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -66,7 +66,7 @@ const featuredProducts: Product[] = [
   {
     id: 'heavyweight-hoodie',
     name: 'Heavyweight Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
@@ -75,7 +75,7 @@ const featuredProducts: Product[] = [
   {
     id: 'jersey-long-sleeve',
     name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
+    price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],

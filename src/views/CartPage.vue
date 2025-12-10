@@ -71,7 +71,7 @@
             </div>
 
             <div style="text-align: right; min-width: 70px;">
-              <p style="margin: 0 0 0.4rem;">$65.00</p>
+              <p style="margin: 0 0 0.4rem;">65.00</p>
               <p style="margin: 0; font-size: 0.8rem; color: #6b7280;">
                 Qty: 1
               </p>
@@ -133,7 +133,7 @@
             </div>
 
             <div style="text-align: right; min-width: 70px;">
-              <p style="margin: 0 0 0.4rem;">$55.00</p>
+              <p style="margin: 0 0 0.4rem;">55.00</p>
               <p style="margin: 0; font-size: 0.8rem; color: #6b7280;">
                 Qty: 1
               </p>
@@ -181,7 +181,7 @@
             "
           >
             <span>Subtotal</span>
-            <span>$120.00</span>
+            <span>120.00</span>
           </div>
 
           <div
@@ -192,7 +192,7 @@
             "
           >
             <span>Estimated Shipping</span>
-            <span>$0.00</span>
+            <span>0.00</span>
           </div>
 
           <div
@@ -217,7 +217,7 @@
             "
           >
             <span>Total</span>
-            <span>$120.00</span>
+            <span>120.00</span>
           </div>
 
           <button

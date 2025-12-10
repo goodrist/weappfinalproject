@@ -46,20 +46,20 @@ const featuredProducts: Product[] = [
   {
     id: 'bow-clip',
     name: 'Bow Clip',
-    price: '$12.99',
+    price: '12.99',
     image: bowclip,
     tag: 'hairclip',
   },
   {
     id: 'blue-beads',
     name: 'Blue Beads',
-    price: '$1.50',
+    price: '1.50',
     image: bluebeads,
   },
   {
     id: 'royal-gvbandana',
     name: 'Royal GV Bandana',
-    price: '$11.99',
+    price: '11.99',
     image: gvbandana,
     colors: ['blue'],
     sizes: ['ONESIZE'],
@@ -67,7 +67,7 @@ const featuredProducts: Product[] = [
   {
     id: 'club-fleece',
     name: 'Club Fleece Hoodie',
-    price: '$12.99',
+    price: '12.99',
     image: dotsock,
     tag: 'Hoodie',
     colors: ['White', 'Blue'],
@@ -76,13 +76,13 @@ const featuredProducts: Product[] = [
   {
     id: 'gvsu-goldtoned-necklace',
     name: 'GVSU Gold Toned Necklace',
-    price: '$21.99',
+    price: '21.99',
     image: gvsugoldtonednecklace,
   },
   {
     id: 'johnsbury-totebag',
     name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
+    price: '29.99',
     image: jvstjohnsburytotebag,
     tag: 'Tote-Bag',
     colors: ['Black'],
@@ -90,7 +90,7 @@ const featuredProducts: Product[] = [
   {
     id: 'rise-swoosh',
     name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
+    price: '29.99',
     image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
@@ -99,7 +99,7 @@ const featuredProducts: Product[] = [
   {
     id: 'gv-beanie',
     name: 'GVSU Beanie',
-    price: '$19.99',
+    price: '19.99',
     image: gvbeanie,
     tag: 'Beanie',
     colors: ['Royal Blue'],
@@ -108,7 +108,7 @@ const featuredProducts: Product[] = [
   {
     id: 'plush-yarnsock',
     name: 'Plush Yarn Sock',
-    price: '$19.99',
+    price: '19.99',
     image: plushyarnsocks,
     tag: 'plushyarnsock',
     colors: ['Royal Blue'],
@@ -117,7 +117,7 @@ const featuredProducts: Product[] = [
   {
     id: 'z11-hat',
     name: 'Z11 Hat',
-    price: '$29.99',
+    price: '29.99',
     image: z11hat,
     tag: 'hat',
     colors: ['Black'],
@@ -126,7 +126,7 @@ const featuredProducts: Product[] = [
   {
     id: 'luxe-scrunchie',
     name: 'Luxe Scrunchie',
-    price: '$19.99',
+    price: '19.99',
     image: luxescrunchie,
     tag: 'scrunchie',
     colors: ['Royal Blue', 'White'],
@@ -135,7 +135,7 @@ const featuredProducts: Product[] = [
   {
     id: 'primetime-hat',
     name: 'Primetime Hat',
-    price: '$22.99',
+    price: '22.99',
     image: primetimehat,
     tag: 'Beanie',
     colors: ['Royal Blue'],

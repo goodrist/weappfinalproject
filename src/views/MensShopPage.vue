@@ -49,7 +49,7 @@ const mensItems: Product[] = [
   {
     id: 'w1',
     name: 'Club Fleece Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: clubfleecehood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -58,7 +58,7 @@ const mensItems: Product[] = [
   {
     id: 'w2',
     name: 'Heavyweight Hoodie',
-    price: '$54.99',
+    price: '54.99',
     image: heavyweighthood,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -67,7 +67,7 @@ const mensItems: Product[] = [
   {
     id: 'w3',
     name: 'Jersey Long Sleeve Tee',
-    price: '$29.99',
+    price: '29.99',
     image: jerseylongsleevetee,
     tag: 'T-Shirt',
     colors: ['Royal Blue', 'White'],
@@ -76,7 +76,7 @@ const mensItems: Product[] = [
   {
     id: 'w4',
     name: 'Nike Legend Tee',
-    price: '$42.99',
+    price: '42.99',
     image: nikelegendtee,
     tag: 'T-Shirt',
     colors: ['Dark Gray'],
@@ -85,7 +85,7 @@ const mensItems: Product[] = [
   {
     id: 'w5',
     name: 'Athletic Soft Touch Tee',
-    price: '$39.99',
+    price: '39.99',
     image: athleticsofttouctee,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -94,7 +94,7 @@ const mensItems: Product[] = [
   {
     id: 'w6',
     name: 'Adidas Creator Tee',
-    price: '$42.99',
+    price: '42.99',
     image: adidascreatortee,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -103,7 +103,7 @@ const mensItems: Product[] = [
   {
     id: 'w7',
     name: 'Nike Legend Tee',
-    price: '$42.99',
+    price: '42.99',
     image: nikelegendtee2,
     tag: 'T-Shirt',
     colors: ['Black'],
@@ -112,7 +112,7 @@ const mensItems: Product[] = [
   {
     id: 'w8',
     name: 'All American Tee',
-    price: '$29.99',
+    price: '29.99',
     image: allamericantee,
     tag: 'T-Shirt',
     colors: ['White'],
@@ -121,7 +121,7 @@ const mensItems: Product[] = [
   {
     id: 'w9',
     name: 'Nantucket Fleece',
-    price: '$42.99',
+    price: '42.99',
     image: nantucketfleece,
     tag: 'Crewneck',
     colors: ['Oxford'],
@@ -130,7 +130,7 @@ const mensItems: Product[] = [
   {
     id: 'w10',
     name: 'Essential Fleece Hood',
-    price: '$62.99',
+    price: '62.99',
     image: essentialfleecehood,
     tag: 'Hoodie',
     colors: ['Oatmeal'],
@@ -139,7 +139,7 @@ const mensItems: Product[] = [
   {
     id: 'w11',
     name: 'Hood',
-    price: '$42.99',
+    price: '42.99',
     image: hood,
     tag: 'Hoodie',
     colors: ['Black'],
@@ -148,7 +148,7 @@ const mensItems: Product[] = [
   {
     id: 'w12',
     name: 'GVSU Hood',
-    price: '$46.99',
+    price: '46.99',
     image: gvsuhood,
     tag: 'Hoodie',
     colors: ['White'],

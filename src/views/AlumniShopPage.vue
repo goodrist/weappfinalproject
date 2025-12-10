@@ -40,13 +40,13 @@ const featuredProducts: Product[] = [
     {
     id: 'alumni-sticker',
     name: 'Alumni Sticker',
-    price: '$5.99',
+    price: '5.99',
     image: alumnisticker,
   },
   {
     id: 'alumni-hood',
     name: 'Alumni Hood',
-    price: '$39.99',
+    price: '39.99',
     image: alumnihood,
     tag: 'Hoodie',
     colors: ['Heather Gray'],
@@ -55,14 +55,14 @@ const featuredProducts: Product[] = [
   {
     id: 'alumni-walldecor',
     name: 'Alumni Wall Decor',
-    price: '$16.00',
+    price: '16.00',
     image: alumniwalldecor,
   },
   /**
   {
     id: 'championalum-hood',
     name: 'Champion Alumni Hood',
-    price: '$49.99',
+    price: '49.99',
     image: championalumhoodie,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
@@ -73,13 +73,13 @@ const featuredProducts: Product[] = [
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
-    price: '$18.99',
+    price: '18.99',
     image: GVAlumni,
   },
   {
     id: 'ladies-strecth-polo',
     name: 'Ladies Stretch Polo Shirt',
-    price: '$29.99',
+    price: '29.99',
     image: LadiestretchPolo,
     colors: ['Grey', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
