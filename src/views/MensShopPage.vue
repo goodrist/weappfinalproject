@@ -2,7 +2,7 @@
     <ProductGrid
         v-if="!selectedItem"
         title="Men’s Apparel"
-        :items="mensItems"
+        :items="mensItems.slice(0, 6)"
         @select="handleSelect"
     />
 
