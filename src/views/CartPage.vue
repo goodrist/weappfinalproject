@@ -191,7 +191,7 @@
 import { useCartStore } from "../stores/cartStore";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { db } from "../firebase";
+import { db } from "../firebase/firebase";
 
 // Load cart store
 const cart = useCartStore();
