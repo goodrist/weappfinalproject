@@ -11,11 +11,12 @@ import FamilyShopPage from '@/views/FamilyShopPage.vue';
 import AlumniShopPage from '@/views/AlumniShopPage.vue';
 import AthleisureShopPage from '@/views/AthleisureShopPage.vue';
 import MensShopPage from '@/views/MensShopPage.vue';
-import AccessoriesPage from './views/AccessoriesPage.vue';
+import AccessoriesPage from '@/views/AccessoriesPage.vue';
+import AccessoriesShopPage from '@/views/AccessoriesShopPage.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
-  { path: '/accessories',name: 'accessories', component: AccessoriesPage },
+  { path: '/accessories', name: 'accessories', component: AccessoriesPage },
   { path: '/mens', name: 'mens', component: MensPage },
   { path: '/womens', name: 'womens', component: WomensPage },
   { path: '/family', name: 'family', component: FamilyPage },
@@ -26,6 +27,7 @@ const routes = [
   { path: '/family-shop', name: 'family-shop', component: FamilyShopPage },
   { path: '/alumni-shop', name: 'alumni-shop', component: AlumniShopPage },
   { path: '/mens-shop', name: 'mens-shop', component: MensShopPage },
+  { path: '/accessories-shop', name: 'accessories-shop', component: AccessoriesShopPage },
   { path: '/:pathMatch(.*)*', redirect: '/' }
 ];
 

@@ -10,7 +10,7 @@
 
   <!-- If no product selected: show Featured grid -->
   <section v-if="!selectedProduct" class="featured">
-    <h2>Featured Looks</h2>
+    <h2>Featured Products</h2>
     <div class="product-grid">
       <div
         v-for="product in featuredProducts"
@@ -47,6 +47,8 @@ import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import gvbeanie from '../images/gvbeanie.jpg';
 import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 type Product = {
   id: string;
@@ -59,7 +61,7 @@ type Product = {
 };
 
 const onShopClick = () => {
-  alert('Collection page coming soon!');
+  router.push("/athleisure");
 };
 
 const featuredProducts: Product[] = [

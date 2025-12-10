@@ -4,10 +4,7 @@
     <div class="hero-text">
       <h1>Laker Accessories</h1>
       <p>Hats, bags, and extras to complete your look.</p>
-
-      <router-link to="/accessories" class="shop-btn">
-        Shop Accessories
-      </router-link>
+      <a href="#" class="shop-btn" @click.prevent="onShopClick">Shop Accessories</a>
       
     </div>
   </section>
@@ -15,8 +12,8 @@
 
   <ProductGrid
     v-if="!selectedItem"
-    title="Accessories & Gifts"
-    :items="accessoriesItems"
+    title="Featured Products"
+    :items="featuredProducts"
     @select="handleSelect"
   />
 
@@ -32,16 +29,18 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
-import risewooshflexhat from '../images/riseswooshflexhat.jpg';
-import gvbeanie from '../images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
-import lakerstorelogo from '../images/lakerstore-logo.png';
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
 import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
+import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
+import gvbeanie from '../images/gvbeanie.jpg';
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 type Product = {
   id: string;
@@ -53,19 +52,77 @@ type Product = {
   sizes?: string[];
 };
 
+const onShopClick = () => {
+  router.push("/accessories-shop");
+};
 
-const accessoriesItems: Product[] = [
+
+const featuredProducts: Product[] = [
   {
-    id: 'a1',
+    id: 'pennant-crew',
+    name: 'Pennant Crew',
+    price: '$49.99',
+    image: pennantcrew,
+    tag: 'Crewneck',
+    colors: ['Heather Gray', 'Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'phoenix-fleece',
+    name: 'Phoenix Fleece Crew',
+    price: '$49.99',
+    image: phoenixfleececrew,
+    tag: 'Crewneck',
+    colors: ['Heather Gray'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'sparkle-crew',
+    name: 'Powerblend Sparkle Crew',
+    price: '$52.99',
+    image: powerblendsparklescrew,
+    tag: 'Crewneck',
+    colors: ['Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'club-fleece',
+    name: 'Club Fleece Hoodie',
+    price: '$54.99',
+    image: clubfleecehood,
+    tag: 'Hoodie',
+    colors: ['Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'heavyweight-hoodie',
+    name: 'Heavyweight Hoodie',
+    price: '$54.99',
+    image: heavyweighthood,
+    tag: 'Hoodie',
+    colors: ['Heather Gray'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'jersey-long-sleeve',
+    name: 'Jersey Long Sleeve Tee',
+    price: '$29.99',
+    image: jerseylongsleevetee,
+    tag: 'T-Shirt',
+    colors: ['White', 'Royal Blue'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'rise-swoosh',
     name: 'Rise Swoosh Flex Hat',
     price: '$29.99',
-    image: risewooshflexhat,
+    image: riseswooshflexhat,
     tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
   },
   {
-    id: 'a2',
+    id: 'gv-beanie',
     name: 'GVSU Beanie',
     price: '$19.99',
     image: gvbeanie,
@@ -74,76 +131,13 @@ const accessoriesItems: Product[] = [
     sizes: ['One Size'],
   },
   {
-    id: 'a3',
+    id: 'jv-tote',
     name: 'JV St. Johnsbury Tote Bag',
     price: '$34.99',
     image: jvstjohnsburytotebag,
-    tag: 'Bag',
+    tag: 'Accessory',
     colors: ['Natural Canvas'],
     sizes: ['One Size'],
-  },
-  {
-    id: 'a4',
-    name: 'Game Day Tote',
-    price: '$32.99',
-    image: jvstjohnsburytotebag,
-    tag: 'Bag',
-  },
-  {
-    id: 'a5',
-    name: 'Logo Sticker Art',
-    price: '$9.99',
-    image: lakerstorelogo,
-    tag: 'Sticker',
-  },
-  {
-    id: 'a6',
-    name: 'Logo Mug Print',
-    price: '$14.99',
-    image: lakerstorelogo,
-    tag: 'Drinkware',
-  },
-  {
-    id: 'a7',
-    name: 'Crew Patch Pin',
-    price: '$8.99',
-    image: pennantcrew,
-    tag: 'Pin',
-  },
-  {
-    id: 'a8',
-    name: 'Fleece Patch Keychain',
-    price: '$8.99',
-    image: phoenixfleececrew,
-    tag: 'Keychain',
-  },
-  {
-    id: 'a9',
-    name: 'Sparkle Laker Keychain',
-    price: '$9.99',
-    image: powerblendsparklescrew,
-    tag: 'Keychain',
-  },
-  {
-    id: 'a10',
-    name: 'Mini Hoodie Ornament',
-    price: '$12.99',
-    image: clubfleecehood,
-    tag: 'Decor',
-  },
-  {
-    id: 'a11',
-    name: 'Crewneck Ornament',
-    price: '$12.99',
-    image: heavyweighthood,
-    tag: 'Decor',
-  },
-  {
-    id: 'a12',
-    name: 'Laker Long Sleeve Art',
-    price: '$11.99',
-    image: jerseylongsleevetee,
-    tag: 'Decor',
   },
 ];
 

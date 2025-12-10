@@ -10,8 +10,8 @@
 
   <ProductGrid
     v-if="!selectedItem"
-    title="Family & Kids"
-    :items="familyItems"
+    title="Featured Products"
+    :items="featuredProducts"
     @select="handleSelect"
   />
 
@@ -29,14 +29,13 @@ import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
+import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
 import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
-import gvbeanie from '../images/gvbeanie.jpg';
 import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
+import gvbeanie from '../images/gvbeanie.jpg';
 import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
-import lakerstorelogo from '../images/lakerstore-logo.png';
-import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -55,106 +54,87 @@ const onShopClick = () => {
   router.push("/family-shop");
 };
 
-const familyItems: Product[] = [
+const featuredProducts: Product[] = [
   {
-    id: 'f1',
-    name: 'Youth Pennant Crew',
-    price: '$39.99',
+    id: 'pennant-crew',
+    name: 'Pennant Crew',
+    price: '$49.99',
     image: pennantcrew,
-    tag: 'Youth',
-    colors: ['Heather Gray'],
-    sizes: ['XS', 'S', 'M', 'L'],
+    tag: 'Crewneck',
+    colors: ['Heather Gray', 'Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'f2',
-    name: 'Youth Phoenix Fleece',
-    price: '$39.99',
+    id: 'phoenix-fleece',
+    name: 'Phoenix Fleece Crew',
+    price: '$49.99',
     image: phoenixfleececrew,
-    tag: 'Youth',
+    tag: 'Crewneck',
     colors: ['Heather Gray'],
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'f3',
-    name: 'Youth Hoodie',
-    price: '$44.99',
+    id: 'sparkle-crew',
+    name: 'Powerblend Sparkle Crew',
+    price: '$52.99',
+    image: powerblendsparklescrew,
+    tag: 'Crewneck',
+    colors: ['Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'club-fleece',
+    name: 'Club Fleece Hoodie',
+    price: '$54.99',
     image: clubfleecehood,
-    tag: 'Youth',
+    tag: 'Hoodie',
     colors: ['Royal Blue'],
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'f4',
-    name: 'Youth Heavyweight Hoodie',
-    price: '$44.99',
+    id: 'heavyweight-hoodie',
+    name: 'Heavyweight Hoodie',
+    price: '$54.99',
     image: heavyweighthood,
-    tag: 'Youth',
+    tag: 'Hoodie',
     colors: ['Heather Gray'],
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'f5',
-    name: 'Youth Long Sleeve Tee',
-    price: '$24.99',
+    id: 'jersey-long-sleeve',
+    name: 'Jersey Long Sleeve Tee',
+    price: '$29.99',
     image: jerseylongsleevetee,
-    tag: 'Youth',
+    tag: 'T-Shirt',
     colors: ['White', 'Royal Blue'],
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'f6',
-    name: 'Youth Beanie',
-    price: '$17.99',
-    image: gvbeanie,
-    tag: 'Youth',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'f7',
-    name: 'Youth Flex Hat',
-    price: '$21.99',
+    id: 'rise-swoosh',
+    name: 'Rise Swoosh Flex Hat',
+    price: '$29.99',
     image: riseswooshflexhat,
-    tag: 'Youth',
+    tag: 'Hat',
     colors: ['Royal Blue'],
     sizes: ['One Size'],
   },
   {
-    id: 'f8',
-    name: 'Mini Tote Bag',
-    price: '$24.99',
+    id: 'gv-beanie',
+    name: 'GVSU Beanie',
+    price: '$19.99',
+    image: gvbeanie,
+    tag: 'Beanie',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
+  },
+  {
+    id: 'jv-tote',
+    name: 'JV St. Johnsbury Tote Bag',
+    price: '$34.99',
     image: jvstjohnsburytotebag,
     tag: 'Accessory',
     colors: ['Natural Canvas'],
     sizes: ['One Size'],
-  },
-  {
-    id: 'f9',
-    name: 'Family Game Day Tee',
-    price: '$24.99',
-    image: lakerstorelogo,
-    tag: 'Unisex',
-  },
-  {
-    id: 'f10',
-    name: 'Family Hoodie',
-    price: '$49.99',
-    image: clubfleecehood,
-    tag: 'Unisex',
-  },
-  {
-    id: 'f11',
-    name: 'Family Crewneck',
-    price: '$47.99',
-    image: powerblendsparklescrew,
-    tag: 'Unisex',
-  },
-  {
-    id: 'f12',
-    name: 'Little Lakers Tee',
-    price: '$21.99',
-    image: jerseylongsleevetee,
-    tag: 'Youth',
   },
 ];
 

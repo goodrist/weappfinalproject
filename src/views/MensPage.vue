@@ -11,8 +11,8 @@
   <!-- If no item selected: show grid -->
   <ProductGrid
     v-if="!selectedItem"
-    title="Men’s Apparel"
-    :items="mensItems"
+    title="Featured Products"
+    :items="featuredProducts"
     @select="handleSelect"
   />
 
@@ -57,9 +57,9 @@ const onShopClick = () => {
   router.push("/mens-shop");
 };
 
-const mensItems: Product[] = [
+const featuredProducts: Product[] = [
   {
-    id: 'm1',
+    id: 'pennant-crew',
     name: 'Pennant Crew',
     price: '$49.99',
     image: pennantcrew,
@@ -68,7 +68,7 @@ const mensItems: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm2',
+    id: 'phoenix-fleece',
     name: 'Phoenix Fleece Crew',
     price: '$49.99',
     image: phoenixfleececrew,
@@ -77,7 +77,7 @@ const mensItems: Product[] = [
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm3',
+    id: 'sparkle-crew',
     name: 'Powerblend Sparkle Crew',
     price: '$52.99',
     image: powerblendsparklescrew,
@@ -86,34 +86,7 @@ const mensItems: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm4',
-    name: 'Rise Swoosh Flex Hat',
-    price: '$29.99',
-    image: riseswooshflexhat,
-    tag: 'Hat',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'm5',
-    name: 'GVSU Beanie',
-    price: '$19.99',
-    image: gvbeanie,
-    tag: 'Beanie',
-    colors: ['Royal Blue'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'm6',
-    name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
-    image: jvstjohnsburytotebag,
-    tag: 'Accessory',
-    colors: ['Natural Canvas'],
-    sizes: ['One Size'],
-  },
-  {
-    id: 'm7',
+    id: 'club-fleece',
     name: 'Club Fleece Hoodie',
     price: '$54.99',
     image: clubfleecehood,
@@ -122,7 +95,7 @@ const mensItems: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm8',
+    id: 'heavyweight-hoodie',
     name: 'Heavyweight Hoodie',
     price: '$54.99',
     image: heavyweighthood,
@@ -131,7 +104,7 @@ const mensItems: Product[] = [
     sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm9',
+    id: 'jersey-long-sleeve',
     name: 'Jersey Long Sleeve Tee',
     price: '$29.99',
     image: jerseylongsleevetee,
@@ -140,25 +113,31 @@ const mensItems: Product[] = [
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'm10',
-    name: 'Extra Pennant Crew',
-    price: '$49.99',
-    image: pennantcrew,
-    tag: 'Crewneck',
+    id: 'rise-swoosh',
+    name: 'Rise Swoosh Flex Hat',
+    price: '$29.99',
+    image: riseswooshflexhat,
+    tag: 'Hat',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
   },
   {
-    id: 'm11',
-    name: 'Extra Phoenix Fleece Crew',
-    price: '$49.99',
-    image: phoenixfleececrew,
-    tag: 'Crewneck',
+    id: 'gv-beanie',
+    name: 'GVSU Beanie',
+    price: '$19.99',
+    image: gvbeanie,
+    tag: 'Beanie',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
   },
   {
-    id: 'm12',
-    name: 'Extra Sparkle Crew',
-    price: '$52.99',
-    image: powerblendsparklescrew,
-    tag: 'Crewneck',
+    id: 'jv-tote',
+    name: 'JV St. Johnsbury Tote Bag',
+    price: '$34.99',
+    image: jvstjohnsburytotebag,
+    tag: 'Accessory',
+    colors: ['Natural Canvas'],
+    sizes: ['One Size'],
   },
 ];
 

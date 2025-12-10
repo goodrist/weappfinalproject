@@ -10,8 +10,8 @@
 
   <ProductGrid
     v-if="!selectedItem"
-    title="Alumni Collection"
-    :items="alumniItems"
+    title="Featured Products"
+    :items="featuredProducts"
     @select="handleSelect"
   />
 
@@ -27,6 +27,18 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import pennantcrew from '../images/pennantcrew.jpg';
+import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
+import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
+import clubfleecehood from '../images/clubfleecehood.jpg';
+import heavyweighthood from '../images/heavyweighthood.jpg';
+import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
+import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
+import gvbeanie from '../images/gvbeanie.jpg';
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 type Product = {
   id: string;
@@ -39,93 +51,90 @@ type Product = {
 };
 
 const onShopClick = () => {
-  alert('Alumni collection coming soon!');
+  router.push("/alumni-shop");
 };
 
-const alumniItems: Product[] = [
+const featuredProducts: Product[] = [
   {
-    id: 'al1',
-    name: 'Alumni Pennant Crew',
-    price: '$52.99',
-    image: '../images/pennantcrew.jpg',
+    id: 'pennant-crew',
+    name: 'Pennant Crew',
+    price: '$49.99',
+    image: pennantcrew,
     tag: 'Crewneck',
+    colors: ['Heather Gray', 'Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'al2',
-    name: 'Alumni Phoenix Fleece',
-    price: '$52.99',
-    image: '../images/phoenixfleececrew.jpg',
+    id: 'phoenix-fleece',
+    name: 'Phoenix Fleece Crew',
+    price: '$49.99',
+    image: phoenixfleececrew,
     tag: 'Crewneck',
+    colors: ['Heather Gray'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'al3',
-    name: 'Alumni Sparkle Crew',
+    id: 'sparkle-crew',
+    name: 'Powerblend Sparkle Crew',
+    price: '$52.99',
+    image: powerblendsparklescrew,
+    tag: 'Crewneck',
+    colors: ['Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  },
+  {
+    id: 'club-fleece',
+    name: 'Club Fleece Hoodie',
     price: '$54.99',
-    image: '../images/powerblendsparklescrew.jpg',
-    tag: 'Crewneck',
-  },
-  {
-    id: 'al4',
-    name: 'Alumni Club Fleece Hoodie',
-    price: '$59.99',
-    image: '../images/clubfleecehood.jpg',
+    image: clubfleecehood,
     tag: 'Hoodie',
+    colors: ['Royal Blue'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'al5',
-    name: 'Alumni Heavyweight Hoodie',
-    price: '$59.99',
-    image: '../images/heavyweighthood.jpg',
+    id: 'heavyweight-hoodie',
+    name: 'Heavyweight Hoodie',
+    price: '$54.99',
+    image: heavyweighthood,
     tag: 'Hoodie',
+    colors: ['Heather Gray'],
+    sizes: ['S', 'M', 'L', 'XL'],
   },
   {
-    id: 'al6',
-    name: 'Alumni Long Sleeve Tee',
+    id: 'jersey-long-sleeve',
+    name: 'Jersey Long Sleeve Tee',
     price: '$29.99',
-    image: '../images/jerseylongsleevetee.jpg',
+    image: jerseylongsleevetee,
     tag: 'T-Shirt',
+    colors: ['White', 'Royal Blue'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
-    id: 'al7',
-    name: 'Alumni Flex Hat',
-    price: '$27.99',
-    image: '../images/riseswooshflexhat.jpg',
+    id: 'rise-swoosh',
+    name: 'Rise Swoosh Flex Hat',
+    price: '$29.99',
+    image: riseswooshflexhat,
     tag: 'Hat',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
   },
   {
-    id: 'al8',
-    name: 'Alumni Beanie',
-    price: '$21.99',
-    image: '../images/gvbeanie.jpg',
+    id: 'gv-beanie',
+    name: 'GVSU Beanie',
+    price: '$19.99',
+    image: gvbeanie,
     tag: 'Beanie',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
   },
   {
-    id: 'al9',
-    name: 'Alumni Tote Bag',
-    price: '$36.99',
-    image: '../images/jvstjohnsburytotebag.jpg',
+    id: 'jv-tote',
+    name: 'JV St. Johnsbury Tote Bag',
+    price: '$34.99',
+    image: jvstjohnsburytotebag,
     tag: 'Accessory',
-  },
-  {
-    id: 'al10',
-    name: 'Alumni Logo Tee',
-    price: '$26.99',
-    image: '../images/lakerstore-logo.png',
-    tag: 'T-Shirt',
-  },
-  {
-    id: 'al11',
-    name: 'Alumni Spirit Crew',
-    price: '$52.99',
-    image: '../images/pennantcrew.jpg',
-    tag: 'Crewneck',
-  },
-  {
-    id: 'al12',
-    name: 'Alumni Pride Hoodie',
-    price: '$59.99',
-    image: '../images/clubfleecehood.jpg',
-    tag: 'Hoodie',
+    colors: ['Natural Canvas'],
+    sizes: ['One Size'],
   },
 ];
 

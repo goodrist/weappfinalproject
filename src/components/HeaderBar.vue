@@ -64,7 +64,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll));
                     <li><router-link to="/mens">Mens</router-link></li> 
                     <li><router-link to="/womens">Womens</router-link></li> 
                     <li><router-link to="/family">Family</router-link></li> 
-                    <li> <router-link to="/accessories">Accessories</router-link> </li> 
+                    <li><router-link to="/accessories">Accessories</router-link></li> 
                     <li><router-link to="/alumni">Alumni</router-link></li> 
                 </ul> 
             </nav>
