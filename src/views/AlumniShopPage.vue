@@ -1,5 +1,5 @@
 <template>
-     <ProductGrid
+  <ProductGrid
     v-if="!selectedItem"
     title="Featured Products"
     :items="featuredProducts.slice(0, 6)"
@@ -15,16 +15,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useCartStore } from "../stores/cartStore";   // ✅ ADDED CART STORE
 
+// Images
 import alumnihood from '../images/alumniImages/alumnihood.jpg';
 import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
-// import championalumhoodie from '../images/alumniImages/championalumhood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
 import LadiestretchPolo from '../images/alumniImages/LadiestretchPolo.jpg';
+
+const cart = useCartStore();   // ✅ CREATE CART INSTANCE
 
 type Product = {
   id: string;
@@ -37,7 +40,7 @@ type Product = {
 };
 
 const featuredProducts: Product[] = [
-    {
+  {
     id: 'alumni-sticker',
     name: 'Alumni Sticker',
     price: '5.99',
@@ -58,18 +61,6 @@ const featuredProducts: Product[] = [
     price: '16.00',
     image: alumniwalldecor,
   },
-  /**
-  {
-    id: 'championalum-hood',
-    name: 'Champion Alumni Hood',
-    price: '49.99',
-    image: championalumhoodie,
-    tag: 'Hoodie',
-    colors: ['Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
-  },
-  */
-
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
@@ -92,12 +83,23 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Alumni:', payload);
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity
+  });
+
+  selectedItem.value = null;  // Return to grid after adding
 };
 </script>

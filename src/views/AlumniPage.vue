@@ -27,16 +27,21 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+
+// Images
 import alumnihood from '../images/alumniImages/alumnihood.jpg';
 import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
-// import championalumnihoodie from '../images/alumniImages/championalumnihood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
 import LadiestretchPolo from '../images/alumniImages/LadiestretchPolo.jpg';
 
 import { useRouter } from "vue-router";
-const router = useRouter();
+import { useCartStore } from "../stores/cartStore";   // ✅ ADDED CART STORE
 
+const router = useRouter();
+const cart = useCartStore();    // ✅ CREATE CART INSTANCE
+
+// Product type
 type Product = {
   id: string;
   name: string;
@@ -51,6 +56,7 @@ const onShopClick = () => {
   router.push("/alumni-shop");
 };
 
+// Featured products
 const featuredProducts: Product[] = [
   {
     id: 'alumni-sticker',
@@ -73,19 +79,6 @@ const featuredProducts: Product[] = [
     price: '16.00',
     image: alumniwalldecor,
   },
-
-  /**
-  {
-    id: 'championalum-hood',
-    name: 'Champion Alumni Hood',
-    price: '49.99',
-    image: championalumnihoodie,
-    tag: 'Hoodie',
-    colors: ['Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
-  },
-  */
-
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
@@ -108,12 +101,24 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — FIXED ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Alumni:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity
+  });
+
+  selectedItem.value = null;  // return to product grid
 };
 </script>

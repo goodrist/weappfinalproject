@@ -5,10 +5,8 @@
       <h1>Laker Accessories</h1>
       <p>Hats, bags, and extras to complete your look.</p>
       <a href="#" class="shop-btn" @click.prevent="onShopClick">Shop Accessories</a>
-      
     </div>
   </section>
-
 
   <ProductGrid
     v-if="!selectedItem"
@@ -29,6 +27,10 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useRouter } from "vue-router";
+import { useCartStore } from "../stores/cartStore";   // ✅ ADDED CART STORE
+
+// Images
 import bowclip from '../images/accessoriesimages/bowclip.jpg';
 import bluebeads from '../images/accessoriesimages/bluebeads.jpg';
 import dotsock from '../images/accessoriesimages/dotsock.jpg';
@@ -42,10 +44,11 @@ import primetimehat from '../images/accessoriesimages/primetimehat.jpg';
 import luxescrunchie from '../images/accessoriesimages/luxescrunchie.jpg';
 import z11hat from '../images/accessoriesimages/z11hat.jpg';
 
-import { useRouter } from "vue-router";
-
+// Router + Store
 const router = useRouter();
+const cart = useCartStore();   // ✅ CREATE CART INSTANCE
 
+// Product type
 type Product = {
   id: string;
   name: string;
@@ -56,11 +59,12 @@ type Product = {
   sizes?: string[];
 };
 
+// Button link
 const onShopClick = () => {
   router.push("/accessories-shop");
 };
 
-
+// Product data
 const featuredProducts: Product[] = [
   {
     id: 'bow-clip',
@@ -162,18 +166,30 @@ const featuredProducts: Product[] = [
   },
 ];
 
+// Selected item for detail page
 const selectedItem = ref<Product | null>(null);
 
 const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — FIXED AND WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Accessories:', payload);
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedItem.value = null;
 };
 </script>
