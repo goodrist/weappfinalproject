@@ -51,7 +51,7 @@ const onShopClick = () => {
   router.push("/womens-shop");
 };
 
-const womensItems: Product[] = [
+const featuredProducts: Product[] = [
   {
     id: 'w1',
     name: 'Pennant Crew',
