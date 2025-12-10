@@ -10,8 +10,8 @@
   <!-- If no item selected: show grid -->
   <ProductGrid
     v-if="!selectedItem"
-    title="Women’s Apparel"
-    :items="womensItems"
+    title="Featured Products"
+    :items="featuredProducts"
     @select="handleSelect"
   />
 
