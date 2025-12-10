@@ -126,7 +126,7 @@ const onAddToCart = () => {
   });
 
   alert(
-    `${quantity.value} × ${props.product.name} (${selectedSize.value}) added to cart (demo).`
+    `${quantity.value} × ${props.product.name} (${selectedSize.value}) added to cart!.`
   );
 };
 </script>
