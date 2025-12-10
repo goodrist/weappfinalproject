@@ -8,7 +8,7 @@ import {
   onSnapshot,
   getDocs,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../firebase/firebase";
 import { useAuthStore } from "./authStore";
 
 export const useCartStore = defineStore("cartStore", () => {
