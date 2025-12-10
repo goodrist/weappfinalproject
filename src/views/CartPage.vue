@@ -181,7 +181,7 @@
               cursor: default;
             "
           >
-            Checkout (placeholder)
+            Checkout
           </button>
         </div>
       </div>
