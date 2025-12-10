@@ -28,6 +28,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from "vue-router";
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED
 
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
@@ -36,8 +37,8 @@ import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
 
-
 const router = useRouter();
+const cart = useCartStore();    // ⭐ CART INSTANCE
 
 type Product = {
   id: string;
@@ -89,12 +90,23 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Men’s:', payload);
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedItem.value = null; // return to grid after adding
 };
 </script>

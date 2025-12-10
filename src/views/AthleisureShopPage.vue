@@ -1,12 +1,12 @@
 <template>
-    <ProductGrid
-        v-if="!selectedItem"
-        title="Athleisure"
-        :items="athleticItems.slice(0, 6)"
-        @select="handleSelect"
-    />
+  <ProductGrid
+    v-if="!selectedItem"
+    title="Athleisure"
+    :items="athleticItems.slice(0, 6)"
+    @select="handleSelect"
+  />
 
-    <!-- If an item is selected: show detail view -->
+  <!-- If an item is selected: show detail view -->
   <ProductDetail
     v-else
     :product="selectedItem"
@@ -15,12 +15,13 @@
   />
 </template>
 
-
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useCartStore } from "../stores/cartStore";   // ⭐ ADDED CART STORE
 
+// Images
 import basketballtee from '../images/athleisureImages/basketballtee.jpg';
 import crosscountrytee from '../images/athleisureImages/crosscountrytee.jpg';
 import footballtee from '../images/athleisureImages/footballtee.jpg';
@@ -34,7 +35,9 @@ import trackfieldtee from '../images/athleisureImages/trackfieldtee.jpg';
 import volleyballtee from '../images/athleisureImages/volleyballtee.jpg';
 import wrestlingtee from '../images/athleisureImages/wrestlingtee.jpg';
 
+const cart = useCartStore();   // ⭐ CREATE CART INSTANCE
 
+// Product Type
 type Product = {
   id: string;
   name: string;
@@ -45,6 +48,7 @@ type Product = {
   sizes?: string[];
 };
 
+// Product List
 const athleticItems: Product[] = [
   {
     id: 'w1',
@@ -91,7 +95,7 @@ const athleticItems: Product[] = [
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
-  
+
   {
     id: 'w6',
     name: 'Soccer Tee',
@@ -155,22 +159,32 @@ const athleticItems: Product[] = [
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
-  
 ];
 
+// Selected Detail Product
 const selectedItem = ref<Product | null>(null);
 
 const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Women’s:', payload);
-};
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity
+  });
 
+  selectedItem.value = null; // Return to grid
+};
 </script>

@@ -27,6 +27,10 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useRouter } from "vue-router";
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED FOR CART
+
+// Images
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
@@ -37,10 +41,11 @@ import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import gvbeanie from '../images/gvbeanie.jpg';
 import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 
-import { useRouter } from "vue-router";
+// Router + Cart Store
 const router = useRouter();
+const cart = useCartStore();   // ⭐ CART INSTANCE
 
-
+// Types
 type Product = {
   id: string;
   name: string;
@@ -51,10 +56,12 @@ type Product = {
   sizes?: string[];
 };
 
+// Shop button route
 const onShopClick = () => {
   router.push("/family-shop");
 };
 
+// Featured Products
 const featuredProducts: Product[] = [
   {
     id: 'pennant-crew',
@@ -139,18 +146,31 @@ const featuredProducts: Product[] = [
   },
 ];
 
+// Handle selection
 const selectedItem = ref<Product | null>(null);
 
 const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — FIXED & WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Family:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedItem.value = null;  // Return to grid after adding
 };
 </script>

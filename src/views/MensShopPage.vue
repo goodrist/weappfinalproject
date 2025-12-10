@@ -1,12 +1,12 @@
 <template>
-    <ProductGrid
-        v-if="!selectedItem"
-        title="Men’s Apparel"
-        :items="mensItems.slice(0, 6)"
-        @select="handleSelect"
-    />
+  <ProductGrid
+    v-if="!selectedItem"
+    title="Men’s Apparel"
+    :items="mensItems.slice(0, 6)"
+    @select="handleSelect"
+  />
 
-    <!-- If an item is selected: show detail view -->
+  <!-- If an item is selected: show detail view -->
   <ProductDetail
     v-else
     :product="selectedItem"
@@ -15,12 +15,13 @@
   />
 </template>
 
-
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED CART STORE
 
+// Images
 import clubfleecehood from '../images/clubfleecehood.jpg';
 import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
@@ -34,6 +35,8 @@ import essentialfleecehood from '../images/mensImages/essentialfleecehood.jpg';
 import hood from '../images/mensImages/hood.jpg';
 import gvsuhood from '../images/mensImages/gvsuhood.jpg';
 
+// ⭐ CART INSTANCE
+const cart = useCartStore();
 
 type Product = {
   id: string;
@@ -134,7 +137,7 @@ const mensItems: Product[] = [
     image: essentialfleecehood,
     tag: 'Hoodie',
     colors: ['Oatmeal'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL']
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
   },
   {
     id: 'w11',
@@ -143,7 +146,7 @@ const mensItems: Product[] = [
     image: hood,
     tag: 'Hoodie',
     colors: ['Black'],
-    sizes: ['S', 'M', 'L', 'XL', '2XL']
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
   },
   {
     id: 'w12',
@@ -152,7 +155,7 @@ const mensItems: Product[] = [
     image: gvsuhood,
     tag: 'Hoodie',
     colors: ['White'],
-    sizes: ['S', 'M', 'L', 'XL']
+    sizes: ['S', 'M', 'L', 'XL'],
   },
 ];
 
@@ -162,14 +165,24 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ FIXED — ADDS TO CART STORE ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Men’s:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity
+  });
+
+  selectedItem.value = null; // return to grid view
 };
-
 </script>
-

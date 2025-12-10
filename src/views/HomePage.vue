@@ -1,5 +1,5 @@
 <template>
-  <!-- Hero Banner (unchanged visually) -->
+  <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-text">
       <h1>Laker Pride Meets Everyday Style</h1>
@@ -8,7 +8,7 @@
     </div>
   </section>
 
-  <!-- If no product selected: show Featured grid -->
+  <!-- Featured grid -->
   <section v-if="!selectedProduct" class="featured">
     <h2>Featured Products</h2>
     <div class="product-grid">
@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <!-- If a product is selected: show the item page -->
+  <!-- Product Detail -->
   <ProductDetail
     v-else
     :product="selectedProduct"
@@ -37,6 +37,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useRouter } from "vue-router";
+import { useCartStore } from "../stores/cartStore";   // ⭐ ADDED CART STORE
+
+// Images
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
@@ -45,11 +49,12 @@ import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
 import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import gvbeanie from '../images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg'];
 
-import { useRouter } from "vue-router";
 const router = useRouter();
+const cart = useCartStore();  // ⭐ CONNECT TO CART STORE
 
+// Product type
 type Product = {
   id: string;
   name: string;
@@ -64,6 +69,7 @@ const onShopClick = () => {
   router.push("/athleisure");
 };
 
+// Featured products (unchanged)
 const featuredProducts: Product[] = [
   {
     id: 'pennant-crew',
@@ -154,13 +160,24 @@ const selectProduct = (product: Product) => {
   selectedProduct.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  // For now we just log it; later we’ll plug into a real cart store.
-  console.log('Add to cart:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedProduct.value = null; // return to grid
 };
 </script>

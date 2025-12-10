@@ -7,23 +7,26 @@
     />
 
     <!-- If an item is selected show detail view -->
-  <ProductDetail
-    v-else
-    :product="selectedItem"
-    @back="selectedItem = null"
-    @add-to-cart="handleAddToCart"
-  />
+    <ProductDetail
+        v-else
+        :product="selectedItem"
+        @back="selectedItem = null"
+        @add-to-cart="handleAddToCart"
+    />
 </template>
 
-
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED
+
+import ProductGrid from '../components/ProductGrid.vue';
+import ProductDetail from '../components/ProductDetail.vue';
+
+// Images
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
 import babytee from '../images/womensImages/babytee.jpg';
-import ProductGrid from '../components/ProductGrid.vue';
-import ProductDetail from '../components/ProductDetail.vue';
 import boyfriendtee from '../images/womensImages/boyfriendtee.jpg';
 import firstdowncroptop from '../images/womensImages/firstdowncroptop.jpg';
 import scoopneckcroptop from '../images/womensImages/scoopneckcroptop.jpg';
@@ -33,6 +36,8 @@ import cutofftank2 from '../images/womensImages/cutofftank2.jpg';
 import comfortwashjrtee from '../images/womensImages/comfortwashjrtee.jpg';
 import clotheslinecroptop from '../images/womensImages/clotheslinecroptee.jpg';
 
+// ⭐ CART INSTANCE
+const cart = useCartStore();
 
 type Product = {
   id: string;
@@ -161,14 +166,23 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Women’s:', payload);
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedItem.value = null; // return to grid
 };
-
 </script>
-

@@ -25,10 +25,13 @@
 </template>
 
 <script setup lang="ts">
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
 import { useRouter } from "vue-router";
+
+// Images
 import pennantcrew from '../images/pennantcrew.jpg';
 import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
 import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
@@ -41,7 +44,9 @@ import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 import lakerstorelogo from '../images/lakerstore-logo.png';
 
 const router = useRouter();
+const cart = useCartStore();    // ⭐ CART INSTANCE
 
+// Type
 type Product = {
   id: string;
   name: string;
@@ -52,10 +57,12 @@ type Product = {
   sizes?: string[];
 };
 
+// Button click → route to full shop page
 const onShopClick = () => {
   router.push("/womens-shop");
 };
 
+// Women’s product list
 const womensItems: Product[] = [
   {
     id: 'w1',
@@ -161,18 +168,31 @@ const womensItems: Product[] = [
   },
 ];
 
+// Selecting items for detail view
 const selectedItem = ref<Product | null>(null);
 
 const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ FIXED — Add to cart now works! ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Women’s:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity,
+  });
+
+  selectedItem.value = null;  // return to grid
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
-    <ProductGrid
-        v-if="!selectedItem"
-        title="Family Apparel"
-        :items="familyItems.slice(0, 6)"
-        @select="handleSelect"
-    />
+  <ProductGrid
+    v-if="!selectedItem"
+    title="Family Apparel"
+    :items="familyItems.slice(0, 6)"
+    @select="handleSelect"
+  />
 
-    <!-- If an item is selected: show detail view -->
+  <!-- If an item is selected: show detail view -->
   <ProductDetail
     v-else
     :product="selectedItem"
@@ -15,12 +15,13 @@
   />
 </template>
 
-
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
+import { useCartStore } from "../stores/cartStore";   // ⭐ REQUIRED FOR CART
 
+// Images
 import championmompowerblendcrew from '../images/familyImages/championmompowerblendcrew.jpg';
 import championmomjerseytee from '../images/familyImages/championmomjerseytee.jpg';
 import ladiescoastlineepicpolo from '../images/familyImages/ladiescoastlineepicpolo.jpg';
@@ -34,6 +35,7 @@ import sistertee from '../images/familyImages/sistertee.jpg';
 import brothertee from '../images/familyImages/brothertee.jpg';
 import youtharmourfleecehood from '../images/familyImages/youtharmourfleecehood.jpg';
 
+const cart = useCartStore();   // ⭐ CREATE CART INSTANCE
 
 type Product = {
   id: string;
@@ -160,14 +162,24 @@ const handleSelect = (product: Product) => {
   selectedItem.value = product;
 };
 
+// ⭐⭐⭐ ADD TO CART — NOW FULLY WORKING ⭐⭐⭐
 const handleAddToCart = (payload: {
   product: Product;
   color: string;
   size: string;
   quantity: number;
 }) => {
-  console.log('Add to cart from Family:', payload);
+
+  cart.addToCart({
+    id: payload.product.id,
+    name: payload.product.name,
+    price: Number(payload.product.price),
+    image: payload.product.image,
+    color: payload.color,
+    size: payload.size,
+    qty: payload.quantity
+  });
+
+  selectedItem.value = null; // return to grid
 };
-
 </script>
-
