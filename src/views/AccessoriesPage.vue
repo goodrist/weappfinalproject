@@ -29,17 +29,19 @@
 import { ref } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
-import pennantcrew from '../images/pennantcrew.jpg';
-import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
-import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
-import clubfleecehood from '../images/clubfleecehood.jpg';
-import heavyweighthood from '../images/heavyweighthood.jpg';
-import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
-import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
-import gvbeanie from '../images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
+import bowclip from '../images/accessoriesimages/bowclip.jpg';
+import bluebeads from '../images/accessoriesimages/bluebeads.jpg';
+import dotsock from '../images/accessoriesimages/dotsock.jpg';
+import gvbandana from '../images/accessoriesimages/gvbandana.jpg';
+import gvsugoldtonednecklace from '../images/accessoriesimages/gvsugoldtonednecklace.jpg';
+import plushyarnsocks from '../images/accessoriesimages/plushyarnsocks.jpg';
+import riseswooshflexhat from '../images/accessoriesimages/riseswooshflexhat.jpg';
+import gvbeanie from '../images/accessoriesimages/gvbeanie.jpg';
+import jvstjohnsburytotebag from '../images/accessoriesimages/jvstjohnsburytotebag.jpg';
+import primetimehat from '../images/accessoriesimages/primetimehat.jpg';
+import luxescrunchie from '../images/accessoriesimages/luxescrunchie.jpg';
+import z11hat from '../images/accessoriesimages/z11hat.jpg';
 
-import { useRouter } from "vue-router";
 const router = useRouter();
 
 type Product = {
@@ -59,58 +61,48 @@ const onShopClick = () => {
 
 const featuredProducts: Product[] = [
   {
-    id: 'pennant-crew',
-    name: 'Pennant Crew',
-    price: '$49.99',
-    image: pennantcrew,
-    tag: 'Crewneck',
-    colors: ['Heather Gray', 'Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'bow-clip',
+    name: 'Bow Clip',
+    price: '$12.99',
+    image: bowclip,
+    tag: 'hairclip',
   },
   {
-    id: 'phoenix-fleece',
-    name: 'Phoenix Fleece Crew',
-    price: '$49.99',
-    image: phoenixfleececrew,
-    tag: 'Crewneck',
-    colors: ['Heather Gray'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    id: 'blue-beads',
+    name: 'Blue Beads',
+    price: '$1.50',
+    image: bluebeads,
   },
   {
-    id: 'sparkle-crew',
-    name: 'Powerblend Sparkle Crew',
-    price: '$52.99',
-    image: powerblendsparklescrew,
-    tag: 'Crewneck',
-    colors: ['Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'royal-gvbandana',
+    name: 'Royal GV Bandana',
+    price: '$11.99',
+    image: gvbandana,
+    colors: ['blue'],
+    sizes: ['ONESIZE'],
   },
   {
     id: 'club-fleece',
     name: 'Club Fleece Hoodie',
-    price: '$54.99',
-    image: clubfleecehood,
+    price: '$12.99',
+    image: dotsock,
     tag: 'Hoodie',
-    colors: ['Royal Blue'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['White', 'Blue'],
+    sizes: ['ONE SIZE'],
   },
   {
-    id: 'heavyweight-hoodie',
-    name: 'Heavyweight Hoodie',
-    price: '$54.99',
-    image: heavyweighthood,
-    tag: 'Hoodie',
-    colors: ['Heather Gray'],
-    sizes: ['S', 'M', 'L', 'XL'],
+    id: 'gvsu-goldtoned-necklace',
+    name: 'GVSU Gold Toned Necklace',
+    price: '$21.99',
+    image: gvsugoldtonednecklace,
   },
   {
-    id: 'jersey-long-sleeve',
+    id: 'johnsbury-totebag',
     name: 'Jersey Long Sleeve Tee',
     price: '$29.99',
-    image: jerseylongsleevetee,
-    tag: 'T-Shirt',
-    colors: ['White', 'Royal Blue'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    image: jvstjohnsburytotebag,
+    tag: 'Tote-Bag',
+    colors: ['Black'],
   },
   {
     id: 'rise-swoosh',
@@ -131,12 +123,39 @@ const featuredProducts: Product[] = [
     sizes: ['One Size'],
   },
   {
-    id: 'jv-tote',
-    name: 'JV St. Johnsbury Tote Bag',
-    price: '$34.99',
-    image: jvstjohnsburytotebag,
-    tag: 'Accessory',
-    colors: ['Natural Canvas'],
+    id: 'plush-yarnsock',
+    name: 'Plush Yarn Sock',
+    price: '$19.99',
+    image: plushyarnsocks,
+    tag: 'plushyarnsock',
+    colors: ['Royal Blue'],
+    sizes: ['One Size'],
+  },
+  {
+    id: 'z11-hat',
+    name: 'Z11 Hat',
+    price: '$29.99',
+    image: z11hat,
+    tag: 'hat',
+    colors: ['Black'],
+    sizes: ['One Size'],
+  },
+  {
+    id: 'luxe-scrunchie',
+    name: 'Luxe Scrunchie',
+    price: '$19.99',
+    image: luxescrunchie,
+    tag: 'scrunchie',
+    colors: ['Royal Blue', 'White'],
+    sizes: ['One Size'],
+  },
+  {
+    id: 'primetime-hat',
+    name: 'Primetime Hat',
+    price: '$22.99',
+    image: primetimehat,
+    tag: 'Beanie',
+    colors: ['Royal Blue'],
     sizes: ['One Size'],
   },
 ];
