@@ -234,12 +234,9 @@ async function handleFakeCheckout() {
   cart.clearCart?.();
 
   // Redirect to success page
-alert("Order has been saved, redirecting to payment");
-// Open Venmo in new window with no login or recipient
-window.open(
-  `https://venmo.com?txn=pay&amount=${subtotal.value}&note=Laker%20Store%20Order`,
-  "_blank"
-);
+  alert("Order has been saved, redirecting to payment");
+  // Open Venmo in new window with no login or recipient
+  window.open("https://venmo.com", "_blank");
 
 
 }
