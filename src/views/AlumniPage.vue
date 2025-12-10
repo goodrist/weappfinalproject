@@ -11,7 +11,7 @@
   <ProductGrid
     v-if="!selectedItem"
     title="Featured Products"
-    :items="featuredProducts"
+    :items="featuredProducts.slice(0, 3)"
     @select="handleSelect"
   />
 
