@@ -42,6 +42,8 @@ import primetimehat from '../images/accessoriesimages/primetimehat.jpg';
 import luxescrunchie from '../images/accessoriesimages/luxescrunchie.jpg';
 import z11hat from '../images/accessoriesimages/z11hat.jpg';
 
+import { useRouter } from "vue-router";
+
 const router = useRouter();
 
 type Product = {

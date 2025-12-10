@@ -16,6 +16,9 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
+import ProductGrid from '../components/ProductGrid.vue';
+import ProductDetail from '../components/ProductDetail.vue';
+
 import bowclip from '../images/accessoriesimages/bowclip.jpg';
 import bluebeads from '../images/accessoriesimages/bluebeads.jpg';
 import dotsock from '../images/accessoriesimages/dotsock.jpg';

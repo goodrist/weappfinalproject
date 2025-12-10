@@ -21,19 +21,6 @@ import { ref, watch } from 'vue';
 import ProductGrid from '../components/ProductGrid.vue';
 import ProductDetail from '../components/ProductDetail.vue';
 
-import pennantcrew from '../images/pennantcrew.jpg';
-import phoenixfleececrew from '../images/phoenixfleececrew.jpg';
-import powerblendsparklescrew from '../images/powerblendsparklescrew.jpg';
-import babytee from '../images/womensImages/babytee.jpg';
-import boyfriendtee from '../images/womensImages/boyfriendtee.jpg';
-import firstdowncroptop from '../images/womensImages/firstdowncroptop.jpg';
-import scoopneckcroptop from '../images/womensImages/scoopneckcroptop.jpg';
-import cutofftank from '../images/womensImages/cutofftank.jpg';
-import uagamedaytee from '../images/womensImages/uagamedaymotiontee.jpg';
-import cutofftank2 from '../images/womensImages/cutofftank2.jpg';
-import comfortwashjrtee from '../images/womensImages/comfortwashjrtee.jpg';
-import clotheslinecroptop from '../images/womensImages/clotheslinecroptee.jpg';
-
 import basketballtee from '../images/athleisureImages/basketballtee.jpg';
 import crosscountrytee from '../images/athleisureImages/crosscountrytee.jpg';
 import footballtee from '../images/athleisureImages/footballtee.jpg';
