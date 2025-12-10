@@ -12,10 +12,11 @@
         flex-wrap: wrap;
       "
     >
-      <!-- Left: cart items list -->
+      <!-- Cart items -->
       <div style="flex: 2 1 60%; min-width: 260px;">
-        <!-- Cart item 1 (placeholder) -->
         <div
+          v-for="item in cart.items"
+          :key="item.id"
           style="
             display: flex;
             gap: 1rem;
@@ -24,7 +25,7 @@
             border-bottom: 1px solid #e5e7eb;
           "
         >
-          <!-- Image placeholder -->
+          <!-- Product Image -->
           <div
             style="
               width: 96px;
@@ -32,7 +33,14 @@
               background-color: #e5e7eb;
               border-radius: 8px;
             "
-          ></div>
+          >
+            <img
+              v-if="item.image"
+              :src="item.image"
+              alt=""
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+            />
+          </div>
 
           <!-- Item info + price -->
           <div
@@ -46,16 +54,20 @@
           >
             <div>
               <p style="margin: 0 0 0.3rem; font-weight: 500;">
-                GV Classic Hoodie
+                {{ item.name }}
               </p>
-              <p style="margin: 0 0 0.3rem; color: #6b7280;">
-                Size: M
+
+              <p v-if="item.size" style="margin: 0 0 0.3rem; color: #6b7280;">
+                Size: {{ item.size }}
               </p>
-              <p style="margin: 0; color: #6b7280;">
-                Color: Navy / White
+
+              <p v-if="item.color" style="margin: 0; color: #6b7280;">
+                Color: {{ item.color }}
               </p>
+
               <button
                 type="button"
+                @click="cart.removeItem(item.id)"
                 style="
                   margin-top: 0.6rem;
                   padding: 0;
@@ -63,7 +75,7 @@
                   background: none;
                   font-size: 0.8rem;
                   color: #9ca3af;
-                  cursor: default;
+                  cursor: pointer;
                 "
               >
                 Remove
@@ -71,88 +83,22 @@
             </div>
 
             <div style="text-align: right; min-width: 70px;">
-              <p style="margin: 0 0 0.4rem;">65.00</p>
+              <p style="margin: 0 0 0.4rem;">{{ item.price.toFixed(2) }}</p>
               <p style="margin: 0; font-size: 0.8rem; color: #6b7280;">
-                Qty: 1
+                Qty: {{ item.qty }}
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Cart item 2 (placeholder) -->
-        <div
-          style="
-            display: flex;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
-          "
-        >
-          <div
-            style="
-              width: 96px;
-              height: 120px;
-              background-color: #e5e7eb;
-              border-radius: 8px;
-            "
-          ></div>
-
-          <div
-            style="
-              flex: 1;
-              display: flex;
-              justify-content: space-between;
-              gap: 1rem;
-              font-size: 0.9rem;
-            "
-          >
-            <div>
-              <p style="margin: 0 0 0.3rem; font-weight: 500;">
-                Pennant Crew
-              </p>
-              <p style="margin: 0 0 0.3rem; color: #6b7280;">
-                Size: S
-              </p>
-              <p style="margin: 0; color: #6b7280;">
-                Color: Heather Grey
-              </p>
-              <button
-                type="button"
-                style="
-                  margin-top: 0.6rem;
-                  padding: 0;
-                  border: none;
-                  background: none;
-                  font-size: 0.8rem;
-                  color: #9ca3af;
-                  cursor: default;
-                "
-              >
-                Remove
-              </button>
-            </div>
-
-            <div style="text-align: right; min-width: 70px;">
-              <p style="margin: 0 0 0.4rem;">55.00</p>
-              <p style="margin: 0; font-size: 0.8rem; color: #6b7280;">
-                Qty: 1
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Empty-state note your teammate can keep or swap out -->
         <p
-          style="
-            margin-top: 1.2rem;
-            font-size: 0.85rem;
-            color: #6b7280;
-          "
+          v-if="cart.items.length === 0"
+          style="margin-top: 1.2rem; font-size: 0.85rem; color: #6b7280;"
         >
-          This is a placeholder cart layout. Later, items will be loaded from the
-          user’s shopping bag and quantities will be editable.
+          Your cart is empty.
         </p>
       </div>
+
 
       <!-- Right: order summary -->
       <div
@@ -181,7 +127,8 @@
             "
           >
             <span>Subtotal</span>
-            <span>120.00</span>
+            <span>{{ cart.items.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2) }}</span>
+
           </div>
 
           <div
@@ -217,7 +164,8 @@
             "
           >
             <span>Total</span>
-            <span>120.00</span>
+            <span>{{ cart.items.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2) }}</span>
+
           </div>
 
           <button
@@ -242,4 +190,6 @@
 </template>
 
 <script setup lang="ts">
+import { useCartStore } from "../stores/cartStore";
+const cart = useCartStore();
 </script>
