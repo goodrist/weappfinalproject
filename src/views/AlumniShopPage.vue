@@ -24,7 +24,7 @@ import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
 // import championalumhoodie from '../images/alumniImages/championalumhood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
-import LadiestrecthPolo from '../images/alumniImages/LadiestrecthPolo.jpg';
+import LadiestretchPolo from '../images/alumniImages/LadiestretchPolo.jpg';
 
 type Product = {
   id: string;
@@ -80,7 +80,7 @@ const featuredProducts: Product[] = [
     id: 'ladies-strecth-polo',
     name: 'Ladies Stretch Polo Shirt',
     price: '$29.99',
-    image: LadiestrecthPolo,
+    image: LadiestretchPolo,
     colors: ['Grey', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
