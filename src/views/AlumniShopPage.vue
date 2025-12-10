@@ -22,7 +22,7 @@ import ProductDetail from '../components/ProductDetail.vue';
 import alumnihood from '../images/alumniImages/alumnihood.jpg';
 import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
-import championalumnihoodie from '../images/alumniImages/championalumhood.jpg';
+// import championalumhoodie from '../images/alumniImages/championalumhood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
 import LadiestrecthPolo from '../images/alumniImages/LadiestrecthPolo.jpg';
 
@@ -58,15 +58,18 @@ const featuredProducts: Product[] = [
     price: '$16.00',
     image: alumniwalldecor,
   },
+  /**
   {
     id: 'championalum-hood',
     name: 'Champion Alumni Hood',
     price: '$49.99',
-    image: championalumnihoodie,
+    image: championalumhoodie,
     tag: 'Hoodie',
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
+  */
+
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
