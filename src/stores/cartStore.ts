@@ -42,7 +42,83 @@ export const useCartStore = defineStore("cartStore", () => {
     { immediate: true }
   );
 
-  // ---------------------------
+  // ------------import { defineStore } from "pinia";
+import { ref, watch } from "vue";
+import { db } from "../firebase/firebase";
+import { collection, doc, setDoc, deleteDoc, onSnapshot } from "firebase/firestore";
+import { useAuthStore } from "./authStore";
+
+export const useCartStore = defineStore("cart", () => {
+  const items = ref<any[]>([]);
+  const auth = useAuthStore();
+
+  // ---------------------------------------------------
+  // Load cart when user logs in
+  // ---------------------------------------------------
+  let unsubscribe: any = null;
+
+  const loadCart = () => {
+    if (!auth.user) return;
+
+    const cartRef = collection(db, "users", auth.user.uid, "cart");
+
+    // Listen for live updates from Firestore
+    unsubscribe = onSnapshot(cartRef, (snapshot) => {
+      items.value = snapshot.docs.map((d) => ({
+        id: d.id,
+        ...d.data(),
+      }));
+    });
+  };
+
+  // ---------------------------------------------------
+  // Stop listening when user logs out
+  // ---------------------------------------------------
+  const clearListener = () => {
+    if (unsubscribe) unsubscribe();
+    unsubscribe = null;
+  };
+
+  // ---------------------------------------------------
+  // Add item to cart
+  // ---------------------------------------------------
+  const addToCart = async (item: any) => {
+    if (!auth.user) return alert("Sign in first!");
+
+    const itemRef = doc(db, "users", auth.user.uid, "cart", item.id);
+
+    await setDoc(itemRef, item);
+
+    // Firestore listener automatically updates Pinia
+  };
+
+  // ---------------------------------------------------
+  // Remove item from cart
+  // ---------------------------------------------------
+  const removeItem = async (id: string) => {
+    if (!auth.user) return;
+
+    await deleteDoc(doc(db, "users", auth.user.uid, "cart", id));
+  };
+
+  // React to login/logout
+  watch(
+    () => auth.user,
+    (newUser) => {
+      clearListener();
+      if (newUser) loadCart();
+      else items.value = [];
+    },
+    { immediate: true }
+  );
+
+  return {
+    items,
+    addToCart,
+    removeItem,
+  };
+});
+---------------
   // ADD ITEM
   // ---------------------------
   const addToCart = async (item: {
