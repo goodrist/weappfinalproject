@@ -235,6 +235,9 @@ async function handleFakeCheckout() {
 
   // Redirect to success page
 alert("Order saved and successful!");
+// Open Venmo in new window with no login or recipient
+window.open("https://venmo.com", "_blank");
+
 
 }
 </script>
