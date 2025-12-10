@@ -88,7 +88,7 @@ const womensItems: Product[] = [
     image: babytee,
     tag: 'T-Shirt',
     colors: ['Black'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],\
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
     category: 'women'
   },
   {
