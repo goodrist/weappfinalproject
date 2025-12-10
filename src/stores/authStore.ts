@@ -1,41 +1,57 @@
 import { defineStore } from "pinia";
-import { auth, provider } from "@/firebase/firebase";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import { ref } from "vue";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth, db } from "../firebase";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
-export const useAuthStore = defineStore("auth", {
-  state: () => ({
-    user: null as null | {
-      uid: string;
-      displayName: string;
-      email: string;
-      photoURL: string;
-    },
-    loading: true,
-  }),
+export const useAuthStore = defineStore("authStore", () => {
+  const user = ref<any>(null);
 
-  actions: {
-    async login() {
-      await signInWithPopup(auth, provider);
-    },
+  // ---------------------------
+  // AUTH STATE LISTENER
+  // ---------------------------
+  onAuthStateChanged(auth, async (firebaseUser) => {
+    if (firebaseUser) {
+      user.value = firebaseUser;
 
-    async logout() {
-      await signOut(auth);
-    },
+      // Ensure user doc exists
+      const userRef = doc(db, "users", firebaseUser.uid);
+      const snap = await getDoc(userRef);
 
-    init() {
-      onAuthStateChanged(auth, (firebaseUser) => {
-        if (firebaseUser) {
-          this.user = {
-            uid: firebaseUser.uid,
-            displayName: firebaseUser.displayName ?? "",
-            email: firebaseUser.email ?? "",
-            photoURL: firebaseUser.photoURL ?? "",
-          };
-        } else {
-          this.user = null;
-        }
-        this.loading = false;
-      });
-    },
-  },
+      if (!snap.exists()) {
+        await setDoc(userRef, {
+          email: firebaseUser.email,
+          createdAt: new Date(),
+        });
+      }
+    } else {
+      user.value = null;
+    }
+  });
+
+  // ---------------------------
+  // GOOGLE SIGN IN
+  // ---------------------------
+  const login = async () => {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+  };
+
+  // ---------------------------
+  // SIGN OUT
+  // ---------------------------
+  const logout = async () => {
+    await signOut(auth);
+  };
+
+  return {
+    user,
+    login,
+    logout,
+  };
 });
