@@ -49,7 +49,7 @@ import heavyweighthood from '../images/heavyweighthood.jpg';
 import jerseylongsleevetee from '../images/jerseylongsleevetee.jpg';
 import riseswooshflexhat from '../images/riseswooshflexhat.jpg';
 import gvbeanie from '../images/gvbeanie.jpg';
-import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg'];
+import jvstjohnsburytotebag from '../images/jvstjohnsburytotebag.jpg';
 
 const router = useRouter();
 const cart = useCartStore();  // ⭐ CONNECT TO CART STORE
