@@ -91,6 +91,8 @@ const athleticItems: Product[] = [
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
+  
+  /**
   {
     id: 'w6',
     name: 'Soccer Tee',
@@ -154,6 +156,7 @@ const athleticItems: Product[] = [
     colors: ['Oxford'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
+  */
 ];
 
 const selectedItem = ref<Product | null>(null);
