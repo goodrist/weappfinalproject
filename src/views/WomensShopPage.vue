@@ -6,7 +6,7 @@
         @select="handleSelect"
     />
 
-    <!-- If an item is selected: show detail view -->
+    <!-- If an item is selected show detail view -->
   <ProductDetail
     v-else
     :product="selectedItem"
