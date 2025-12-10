@@ -30,9 +30,9 @@ import ProductDetail from '../components/ProductDetail.vue';
 import alumnihood from '../images/alumniImages/alumnihood.jpg';
 import alumnisticker from '../images/alumniImages/alumnisticker.jpg';
 import alumniwalldecor from '../images/alumniImages/alumniwalldecor.jpg';
-import championalumnihoodie from '../images/alumniImages/championalumnihood.jpg';
+// import championalumnihoodie from '../images/alumniImages/championalumnihood.jpg';
 import GVAlumni from '../images/alumniImages/GVAlumni.jpg';
-import LadiestrecthPolo from '../images/alumniImages/LadiestrecthPolo.jpg';
+import LadiestretchPolo from '../images/alumniImages/LadiestretchPolo.jpg';
 
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -73,6 +73,7 @@ const featuredProducts: Product[] = [
     price: '$16.00',
     image: alumniwalldecor,
   },
+  /**
   {
     id: 'championalum-hood',
     name: 'Champion Alumni Hood',
@@ -82,6 +83,7 @@ const featuredProducts: Product[] = [
     colors: ['Royal Blue'],
     sizes: ['S', 'M', 'L', 'XL'],
   },
+  */
   {
     id: 'Gv-Alumni Mug',
     name: 'GV Alumni 20oz Mug',
@@ -89,10 +91,10 @@ const featuredProducts: Product[] = [
     image: GVAlumni,
   },
   {
-    id: 'ladies-strecth-polo',
+    id: 'ladies-stretch-polo',
     name: 'Ladies Stretch Polo Shirt',
     price: '$29.99',
-    image: LadiestrecthPolo,
+    image: LadiestretchPolo,
     colors: ['Grey', 'Royal Blue'],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
