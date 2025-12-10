@@ -99,7 +99,6 @@
         </p>
       </div>
 
-
       <!-- Right: order summary -->
       <div
         style="
@@ -127,8 +126,7 @@
             "
           >
             <span>Subtotal</span>
-            <span>{{ cart.items.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2) }}</span>
-
+            <span>{{ subtotal.toFixed(2) }}</span>
           </div>
 
           <div
@@ -164,12 +162,12 @@
             "
           >
             <span>Total</span>
-            <span>{{ cart.items.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2) }}</span>
-
+            <span>{{ subtotal.toFixed(2) }}</span>
           </div>
 
           <button
             type="button"
+            @click="handleFakeCheckout"
             style="
               width: 100%;
               padding: 0.7rem 1rem;
@@ -178,7 +176,7 @@
               background-color: #111827;
               color: #ffffff;
               font-size: 0.9rem;
-              cursor: default;
+              cursor: pointer;
             "
           >
             Checkout
@@ -191,5 +189,43 @@
 
 <script setup lang="ts">
 import { useCartStore } from "../stores/cartStore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { db } from "../firebase";
+
+// Load cart store
 const cart = useCartStore();
+
+// Subtotal computed value
+const subtotal = cart.items.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+// FAKE CHECKOUT FUNCTION
+async function handleFakeCheckout() {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("Please sign in before checking out.");
+    return;
+  }
+
+  // Create order object
+  const order = {
+    userId: user.uid,
+    items: cart.items,
+    total: subtotal,
+    createdAt: serverTimestamp(),
+  };
+
+  // Save order to Firestore
+  await addDoc(collection(db, "orders"), order);
+
+  // Clear cart
+  if (cart.clearCart) {
+    cart.clearCart();
+  }
+
+  // Redirect
+  window.location.href = "/success";
+}
 </script>
